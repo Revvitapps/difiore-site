@@ -1,37 +1,3094 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>DiFiore Builders — Quality from the foundation to the roof</title>
-  <meta name="description" content="Quality work from the foundation to the roof — get in touch for an estimate on your next home-improvement project!">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>DiFiore Builders — Faith, Family, Quality Craftsmanship</title>
+
   <style>
-    :root{--primary:#1a365d;--secondary:#2d5a87;--accent:#c7962c;--bg:#f7fafc;--white:#fff}
-    *{box-sizing:border-box} body{margin:0;font-family:Poppins,Arial,sans-serif;background:var(--bg);color:#0f172a}
-    .wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:40px}
-    .card{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;border-radius:18px;box-shadow:0 12px 36px rgba(0,0,0,.18);padding:40px;max-width:980px;width:100%;text-align:center}
-    .pill{display:inline-block;background:#ffefc7;color:#1a365d;font-weight:800;padding:6px 14px;border-radius:999px;margin-bottom:14px}
-    h1{font-size:clamp(2rem,5vw,3.5rem);margin:0 0 10px}
-    p{opacity:.95;margin:0 0 18px}
-    .ctas{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:10px}
-    .btn{font-weight:800;padding:12px 18px;border-radius:10px;text-decoration:none;display:inline-block}
-    .primary{background:var(--accent);color:#fff;box-shadow:0 6px 20px rgba(0,0,0,.25)}
-    .ghost{border:2px solid #fff;color:#fff;background:transparent}
-    footer{margin-top:14px;font-size:.9rem;opacity:.9}
+    :root{
+      --primary:#1a365d;
+      --secondary:#2d5a87;
+      --accent:#c7962c;
+      --accent-700:#b8862a;
+      --accent-light:#f1e2b8;
+      --text-dark:#1a202c;
+      --text-light:#4a5568;
+      --bg-light:#f7fafc;
+      --white:#ffffff;
+      --shadow:rgba(0,0,0,.1);
+      --shadow-strong:rgba(0,0,0,.2);
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{font-family:Georgia, serif; color:var(--text-dark); line-height:1.6; background:#fff; overflow-x:hidden}
+
+    /* Accessibility */
+    .skip-link{position:absolute;top:-40px;left:0;background:#000;color:#fff;padding:.5rem .75rem;z-index:2000;border-radius:0 0 .4rem .4rem}
+    .skip-link:focus{top:0}
+
+    /* Topbar */
+    .topbar{background:#0f2746;color:#e6edf7;font-size:.9rem}
+    .topbar .topbar-inner{max-width:1200px;margin:0 auto;padding:.4rem 1rem;display:flex;align-items:center;justify-content:space-between;gap:.75rem;flex-wrap:wrap}
+    .since-pill{display:inline-flex;align-items:center;gap:.4rem;background:rgba(199,150,44,.15);color:#ffe9b1;border:1px solid rgba(199,150,44,.35);padding:.25rem .6rem;border-radius:999px;font-weight:700}
+
+    /* Header */
+    .header{position:sticky;top:0;width:100%;background:rgba(26,54,93,.95);backdrop-filter:blur(10px);z-index:1000;transition:box-shadow .3s ease}
+    .nav{max-width:1200px;margin:0 auto;padding:.9rem 1rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .brand{display:flex;align-items:center;gap:.75rem;text-decoration:none;color:#fff}
+    .logo-mark{width:36px;height:36px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),#e8c468);color:#1a1a1a;border-radius:8px;font-weight:900;box-shadow:0 6px 18px rgba(199,150,44,.35)}
+    .logo-text{font-size:1.35rem;font-weight:800}
+    .nav-links{list-style:none;display:flex;gap:1.5rem}
+    .nav-links a{color:#fff;text-decoration:none;font-weight:600}
+    .nav-links a:hover{color:var(--accent)}
+    .cta-button{background:var(--accent);color:#fff;padding:.65rem 1rem;border:none;border-radius:8px;font-weight:800;text-decoration:none;cursor:pointer;transition:.2s}
+    .cta-button:hover{background:var(--accent-700);transform:translateY(-1px);box-shadow:0 6px 16px rgba(199,150,44,.35)}
+    .mobile-toggle{display:none;appearance:none;border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;padding:.55rem .65rem;border-radius:8px;cursor:pointer}
+    .hambar{display:block;width:22px;height:2px;background:#fff;position:relative}
+    .hambar::before,.hambar::after{content:"";position:absolute;left:0;right:0;height:2px;background:#fff}
+    .hambar::before{top:-6px}.hambar::after{top:6px}
+    .mobile-menu{display:none;background:rgba(26,54,93,.98);border-top:1px solid rgba(255,255,255,.12)}
+    .mobile-menu.open{display:block}
+    .mobile-menu ul{list-style:none;padding:.5rem 1rem}
+    .mobile-menu a{display:block;padding:.75rem .5rem;color:#fff;text-decoration:none;border-radius:6px}
+    .mobile-menu a:hover{background:rgba(255,255,255,.06)}
+    .mobile-cta{padding:.75rem 1rem 1rem}
+
+    /* Hero */
+    .hero{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;padding:112px 1rem 80px;text-align:center;position:relative;overflow:hidden}
+    .hero::before{content:"";position:absolute;inset:0;background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="g" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="0.5" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="0.3" fill="rgba(255,255,255,0.05)"/><circle cx="50" cy="10" r="0.4" fill="rgba(255,255,255,0.08)"/></pattern></defs><rect width="100" height="100" fill="url(%23g)"/></svg>') center/cover no-repeat;opacity:.3}
+    .hero-content{max-width:860px;margin:0 auto;position:relative;z-index:1}
+    .hero h1{font-size:clamp(2.2rem,4.8vw,4rem);margin-bottom:.6rem;text-shadow:2px 2px 4px rgba(0,0,0,.3)}
+    .hero .subtitle{font-size:1.1rem;color:var(--accent-light);margin-bottom:.35rem}
+    .hero .tagline{font-size:1.05rem;opacity:.95;margin-bottom:1.2rem}
+    .since-badge{display:inline-flex;gap:.4rem;align-items:center;color:#0f2746;background:#ffefc7;border:1px solid #f2d58c;padding:.3rem .6rem;border-radius:999px;font-weight:800;margin-bottom:.75rem}
+    .btn-primary,.btn-secondary{padding:.9rem 1.4rem;border-radius:8px;font-weight:800;font-size:1.05rem;text-decoration:none;display:inline-block}
+    .btn-primary{background:var(--accent);color:#fff;box-shadow:0 10px 24px rgba(199,150,44,.35)}
+    .btn-primary:hover{background:var(--accent-700);transform:translateY(-1px)}
+    .btn-secondary{background:transparent;color:#fff;border:2px solid #fff}
+    .btn-secondary:hover{background:#fff;color:var(--primary)}
+    .faith-accent{position:relative}
+    .faith-accent::after{content:'✨';position:absolute;right:-22px;top:50%;transform:translateY(-50%);color:var(--accent);font-size:.85em}
+
+    /* About */
+    .about{padding:80px 1rem;background:#fff}
+    .container{max-width:1200px;margin:0 auto}
+    .about-content{display:grid;gap:2rem;grid-template-columns:1.05fr .95fr;align-items:center}
+    .about-text h2{font-size:clamp(1.6rem,3vw,2.2rem);color:var(--primary);margin-bottom:.6rem}
+    .about-text p{color:var(--text-light);margin-bottom:1rem;font-size:1.05rem}
+    .about-badge{display:inline-flex;gap:.4rem;align-items:center;background:rgba(199,150,44,.12);border:1px solid rgba(199,150,44,.35);color:#7a5a14;padding:.3rem .6rem;border-radius:999px;font-weight:700;margin:.25rem 0 1rem}
+    .about-image{border-radius:10px;overflow:hidden;box-shadow:0 10px 40px var(--shadow);position:relative;background:#000}
+    .about-image img{width:100%;height:100%;object-fit:cover;display:block;filter:contrast(1.02) saturate(1.02)}
+    .about-caption{position:absolute;bottom:14px;left:14px;right:14px;background:rgba(0,0,0,.65);color:#fff;padding:.8rem 1rem;border-radius:8px;text-align:center}
+
+    /* Pillars Banner */
+    .pillars{background:linear-gradient(90deg,#0e213b,#173a66);color:#fff;padding:28px 1rem}
+    .pillars-inner{max-width:1200px;margin:0 auto;display:grid;gap:1rem;grid-template-columns:repeat(3,1fr);align-items:center}
+    .pillar{display:flex;gap:.8rem;align-items:flex-start;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);padding:12px 14px;border-radius:10px}
+    .pillar .icon{font-size:1.25rem}
+    .pillar h4{margin:0;color:#ffefc7}
+    .pillar p{margin:2px 0 0;color:#d8e6ff;font-size:.95rem}
+    @media (max-width:860px){ .about-content{grid-template-columns:1fr} .pillars-inner{grid-template-columns:1fr} }
+
+    /* Service Hero Sections */
+    .services-intro{padding:48px 1rem;background:var(--bg-light);text-align:center}
+    .services-intro h2{font-size:clamp(1.8rem,3.2vw,2.4rem);color:var(--primary);margin-bottom:.35rem}
+    .services-intro p{color:var(--text-light)}
+    .service-hero{position:relative;min-height:56vh;display:grid;place-items:center;color:#fff;isolation:isolate}
+    .service-hero .bg{position:absolute;inset:0;background-size:cover;background-position:center;background-repeat:no-repeat;transform:scale(1.02)}
+    .service-hero .tint{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,18,30,.45),rgba(10,18,30,.65))}
+    .service-hero .content{position:relative;z-index:2;max-width:1100px;margin:0 auto;padding:48px 1rem;text-align:center}
+    .service-hero h3{font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:.6rem}
+    .service-meta{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;margin-bottom:1rem}
+    .meta-pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);padding:.3rem .6rem;border-radius:999px;font-weight:700}
+    .service-hero p.lead{max-width:820px;margin:0 auto 1rem;color:#eef4ff}
+    .service-bullets{max-width:900px;margin:0 auto 1.2rem;display:grid;gap:.5rem;grid-template-columns:repeat(3,1fr)}
+    .service-bullets li{list-style:none;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);padding:.55rem .7rem;border-radius:8px}
+    .service-cta{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+    .service-cta .btn-primary{box-shadow:none}
+    @media (max-width:900px){ .service-bullets{grid-template-columns:1fr} }
+
+    /* Parallax-ish on large screens */
+    @media (min-width:1024px){ .service-hero .bg{background-attachment:fixed} }
+
+    /* Calculator */
+    .calculator-section{padding:80px 1rem;background:var(--bg-light)}
+    .section-title{font-size:clamp(1.8rem,3vw,2.5rem);color:var(--primary);margin-bottom:.6rem}
+    .section-subtitle{font-size:1.1rem;color:var(--text-light)}
+    .calculator-header{text-align:center;margin-bottom:2rem}
+    .calculator-container{background:#fff;border-radius:14px;padding:1.2rem;box-shadow:0 10px 40px var(--shadow);max-width:1000px;margin:0 auto}
+
+    /* Footer */
+    .footer{background:var(--primary);color:#fff;padding:56px 1rem 28px}
+    .footer-content{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-bottom:1.5rem}
+    .footer-section h3{color:var(--accent);margin-bottom:.6rem}
+    .footer-section p,.footer-section li{color:rgba(255,255,255,.85);margin-bottom:.4rem}
+    .footer-section ul{list-style:none}
+    .footer a{color:rgba(255,255,255,.85);text-decoration:none}
+    .footer a:hover{color:var(--accent)}
+    .footer-badges{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.5rem}
+    .footer-pill{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);padding:.35rem .6rem;border-radius:999px;font-size:.9rem}
+    .footer-bottom{text-align:center;padding-top:1rem;border-top:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.7)}
+
+    /* Animations */
+    .fade-in{opacity:0;transform:translateY(24px);transition:all .6s ease}
+    .fade-in.visible{opacity:1;transform:translateY(0)}
   </style>
 </head>
 <body>
-  <main class="wrap">
-    <section class="card" aria-label="Hero">
-      <div class="pill">In Business Since 2003</div>
-      <h1>Quality work from the foundation to the roof</h1>
-      <p>Get in touch for an estimate on your next home-improvement project!</p>
-      <div class="ctas">
-        <a class="btn primary" href="https://difiorebuilders.com/project-calculator">Project Calculator</a>
-        <a class="btn ghost" href="https://difiorebuilders.com/our-story">Our Story</a>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- Topbar -->
+  <div class="topbar" role="region" aria-label="Highlights">
+    <div class="topbar-inner">
+      <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
+        <span class="since-pill" aria-label="In business since 2003">🏅 Since 2003</span>
+        <span>Faith • Family • Quality Craftsmanship</span>
       </div>
-      <footer>Serving Pennsylvania • General Contractor • Roofing • Kitchens • Bathrooms • Decks • Basements</footer>
+      <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
+        <span>📍 Pennsylvania & Charlotte Metro</span>
+        <a href="#contact" aria-label="Contact">📧 info@difiorebuilders.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" role="banner">
+    <nav class="nav" aria-label="Primary">
+      <a href="#home" class="brand">
+        <span class="logo-mark" aria-hidden="true">DB</span>
+        <span class="logo-text">DiFiore Builders</span>
+      </a>
+      <ul class="nav-links" role="menubar">
+        <li role="none"><a role="menuitem" href="#home">Home</a></li>
+        <li role="none"><a role="menuitem" href="#about">About</a></li>
+        <li role="none"><a role="menuitem" href="#services">Services</a></li>
+        <li role="none"><a role="menuitem" href="#calculator">Calculator</a></li>
+        <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:.6rem">
+        <a class="cta-button" href="#calculator">Get Estimate</a>
+        <button class="mobile-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+          <span class="hambar" aria-hidden="true"></span>
+        </button>
+      </div>
+    </nav>
+    <div id="mobileMenu" class="mobile-menu" role="dialog" aria-label="Mobile menu">
+      <ul>
+        <li><a href="#home" data-nav-close>Home</a></li>
+        <li><a href="#about" data-nav-close>About</a></li>
+        <li><a href="#services" data-nav-close>Services</a></li>
+        <li><a href="#calculator" data-nav-close>Calculator</a></li>
+        <li><a href="#contact" data-nav-close>Contact</a></li>
+      </ul>
+      <div class="mobile-cta">
+        <a class="cta-button" href="#calculator" data-nav-close>Get Estimate</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="since-badge" aria-label="In business since 2003">🏆 In business since 2003</div>
+      <h1>Building Dreams with <span class="faith-accent">Faith</span> & Excellence</h1>
+      <p class="subtitle">Serving Pennsylvania • Expanding to Charlotte Metro</p>
+      <p class="tagline">Where quality craftsmanship meets unwavering integrity</p>
+      <div style="display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap">
+        <a href="#calculator" class="btn-primary">Get Your Estimate</a>
+        <a href="#about" class="btn-secondary">Our Story</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <main id="main">
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-content fade-in">
+          <div class="about-text">
+            <span class="about-badge">🏅 In Business Since 2003</span>
+            <h2>Full-Service General Construction — From Foundation to Roof</h2>
+            <p>A full-service general construction company established in 2003, DiFiore Builders Inc. provides quality work from the foundation to the roof of your home. With years of experience to rely on, we specialize in all aspects of building and remodeling — kitchens, bathrooms, new additions, basements, decks, roofing and siding, and more.</p>
+            <p>Being a small, local team, you can expect nothing less than personalized care and attention to detail. We’re proud of our longstanding reputation as your one-call solution here in the Tri-State Area. Get in touch anytime for a quote — we’re always happy to help.</p>
+          </div>
+
+          <figure class="about-image" aria-describedby="about-caption">
+            <picture>
+              <!-- the provided owner + right-hand man image -->
+              <source srcset="https://img1.wsimg.com/isteam/ip/111e2203-c8e6-4588-acfc-521f62348879/1caf07f0-8ccd-4239-a28b-6fbfef42a7dc.jpg/:/rs=w:1240,h:620,cg:true,m/cr=w:1240,h:620" media="(min-width: 600px)">
+              <img src="https://img1.wsimg.com/isteam/ip/111e2203-c8e6-4588-acfc-521f62348879/1caf07f0-8ccd-4239-a28b-6fbfef42a7dc.jpg/:/rs=w:1240,h:620,cg:true,m/cr=w:1240,h:620" alt="The owner of DiFiore Builders and his right-hand man" loading="lazy" width="1240" height="620">
+            </picture>
+            <figcaption id="about-caption" class="about-caption">Our leadership team — committed to personal service and quality craftsmanship.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pillars Banner -->
+    <section class="pillars" aria-label="Our Pillars">
+      <div class="pillars-inner">
+        <div class="pillar">
+          <div class="icon">🛡️</div>
+          <div>
+            <h4>Integrity</h4>
+            <p>Honest estimates, transparent communication, workmanship we stand behind.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="icon">💡</div>
+          <div>
+            <h4>Innovation</h4>
+            <p>Modern materials & smart detailing that elevate performance and style.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="icon">🏠</div>
+          <div>
+            <h4>Impact</h4>
+            <p>Spaces that improve daily life and add lasting value to your home.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Intro -->
+    <section id="services" class="services-intro">
+      <div class="container">
+        <h2>Our Services — Built on Experience Since 2003</h2>
+        <p>From roofs to renovations, additions to new builds — we’ve got you covered.</p>
+      </div>
+    </section>
+
+    <!-- SERVICE: Roofing & Siding -->
+    <section class="service-hero" aria-labelledby="svc-roofing">
+      <div class="bg" style="background-image:url('https://img1.wsimg.com/isteam/ip/111e2203-c8e6-4588-acfc-521f62348879/2-0002.jpg/:/rs=w:1280');"></div>
+      <div class="tint"></div>
+      <div class="content">
+        <div class="service-meta">
+          <span class="meta-pill">🏅 Since 2003</span>
+          <span class="meta-pill">🛡️ Licensed & Insured</span>
+        </div>
+        <h3 id="svc-roofing">Roofing &amp; Siding</h3>
+        <p class="lead">Protect your home with proven systems and clean, durable finishes.</p>
+        <ul class="service-bullets" aria-label="Roofing & Siding capabilities">
+          <li>Traditional Asphalt Dimensional Shingles</li>
+          <li>Standing Seam Metal & Flat Roofs</li>
+          <li>Rubber Membrane</li>
+          <li>Gutter Guard Systems</li>
+          <li>Downspouts & Aluminum</li>
+          <li>Vinyl, Hardie Board, Azek Trim — many styles</li>
+        </ul>
+        <div class="service-cta">
+          <a class="btn-primary" href="#calculator">Get Roofing/Siding Estimate</a>
+          <a class="btn-secondary" href="#contact">Talk to a Specialist</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE: Additions -->
+    <section class="service-hero" aria-labelledby="svc-additions">
+      <div class="bg" style="background-image:url('https://img1.wsimg.com/isteam/ip/111e2203-c8e6-4588-acfc-521f62348879/ca6183c2-7ef0-4157-95d2-7aa7ea2c3b4b/:/cr=t:12.54%25,l:0%25,w:100%25,h:74.92%25/rs=w:600,h:300,cg=true');"></div>
+      <div class="tint"></div>
+      <div class="content">
+        <div class="service-meta">
+          <span class="meta-pill">🏅 Since 2003</span>
+          <span class="meta-pill">🧱 Custom Framing & Finish</span>
+        </div>
+        <h3 id="svc-additions">Additions</h3>
+        <p class="lead">More space, done right — seamlessly integrated with your home.</p>
+        <ul class="service-bullets" aria-label="Additions capabilities">
+          <li>Second Floor Additions & Dormers</li>
+          <li>Master Bedrooms & Bathrooms</li>
+          <li>Family Rooms & Sun Rooms</li>
+          <li>In-Law Quarters</li>
+          <li>Finished Basements</li>
+          <li>Garages & More</li>
+        </ul>
+        <div class="service-cta">
+          <a class="btn-primary" href="#calculator">Get Additions Estimate</a>
+          <a class="btn-secondary" href="#contact">Discuss Your Plans</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE: Renovations (Kitchen/Bath/Basements) with rotating background -->
+    <section class="service-hero" aria-labelledby="svc-reno">
+      <div id="renoBg" class="bg"></div>
+      <div class="tint"></div>
+      <div class="content">
+        <div class="service-meta">
+          <span class="meta-pill">🏅 Since 2003</span>
+          <span class="meta-pill">🖼️ Design-Driven</span>
+        </div>
+        <h3 id="svc-reno">Renovations — Kitchens, Bathrooms, Basements</h3>
+        <p class="lead">Functional, beautiful spaces with thoughtful details and durable finishes.</p>
+        <ul class="service-bullets" aria-label="Renovations capabilities">
+          <li>Kitchens — cabinetry, counters, lighting, layout</li>
+          <li>Bathrooms — tile, showers, accessibility</li>
+          <li>Finished Basements — living, office, play</li>
+          <li>Windows, Siding, Roofing tie-ins</li>
+          <li>Fences, Decks, Patios</li>
+          <li>Permits & project management</li>
+        </ul>
+        <div class="service-cta">
+          <a class="btn-primary" href="#calculator">Get Renovation Estimate</a>
+          <a class="btn-secondary" href="#contact">See If We’re a Fit</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE: New Builds & General Construction -->
+    <section class="service-hero" aria-labelledby="svc-builds">
+      <div class="bg" style="background-image:url('https://img1.wsimg.com/isteam/ip/111e2203-c8e6-4588-acfc-521f62348879/1-0002.jpg/:/rs=w:1280');"></div>
+      <div class="tint"></div>
+      <div class="content">
+        <div class="service-meta">
+          <span class="meta-pill">🏅 Since 2003</span>
+          <span class="meta-pill">📐 Full-Service GC</span>
+        </div>
+        <h3 id="svc-builds">New Builds &amp; General Construction</h3>
+        <p class="lead">From ground-up to whole-home updates, we manage every detail.</p>
+        <ul class="service-bullets" aria-label="New Builds capabilities">
+          <li>Custom Homes & Major Renovations</li>
+          <li>Siding/Roofing/Windows packages</li>
+          <li>Fences, Decks, Patios & Hardscape</li>
+          <li>Structural & Framing</li>
+          <li>Energy-smart materials</li>
+          <li>Trusted trade partners</li>
+        </ul>
+        <div class="service-cta">
+          <a class="btn-primary" href="#calculator">Start Your Project</a>
+          <a class="btn-secondary" href="#contact">Contact Our Team</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calculator -->
+    <section id="calculator" class="calculator-section" aria-labelledby="calc-title">
+      <div class="container">
+        <div class="calculator-header fade-in">
+          <h2 id="calc-title" class="section-title">Get Your Project Estimate</h2>
+          <p class="section-subtitle">Honest pricing for quality work. No hidden fees, no surprises.</p>
+        </div>
+        <div class="calculator-container fade-in">
+          <div id="hb-calculator"></div>
+        </div>
+      </div>
     </section>
   </main>
+
+  <!-- Footer -->
+  <footer id="contact" class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>DiFiore Builders</h3>
+          <p>Building dreams with faith and excellence since 2003.</p>
+          <div class="footer-badges">
+            <span class="footer-pill">🏆 Since 2003</span>
+            <span class="footer-pill">🔧 Workmanship Warranty</span>
+            <span class="footer-pill">🛡️ Licensed &amp; Insured</span>
+          </div>
+          <p style="margin-top:.6rem"><strong>Pennsylvania Office:</strong><br/>Serving Central PA</p>
+          <p><strong>Charlotte Metro:</strong><br/>Serving the greater Charlotte area</p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Our Services</h3>
+          <ul>
+            <li><a href="#services">Roofing & Siding</a></li>
+            <li><a href="#services">Additions</a></li>
+            <li><a href="#services">Kitchens & Bathrooms</a></li>
+            <li><a href="#services">New Builds</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>📞 Call for immediate assistance</p>
+          <p>📧 info@difiorebuilders.com</p>
+          <p>📍 Serving PA &amp; Charlotte Metro</p>
+          <p>⏰ Mon–Sat: 7AM–6PM</p>
+          <p>🙏 Christian-owned family business</p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Why Choose Us</h3>
+          <ul>
+            <li>20+ years of experience</li>
+            <li>Family-owned &amp; operated</li>
+            <li>Christian values &amp; integrity</li>
+            <li>Licensed &amp; fully insured</li>
+            <li>Workmanship warranty</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 DiFiore Builders. All rights reserved. | Established 2003 • Faith • Family • Quality</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Calculator Styles (your original theme, retained) -->
+  <style>
+    :root{
+      --bg:#f8fafc; --panel:#ffffff; --text:#0f172a; --muted:#64748b; --primary:#1a365d; --primary2:#2d5a87;
+      --ring:#7c9cbd; --border:#e5e7eb; --green:#059669; --orange:#ea580c; --purple:#7c3aed;
+    }
+    #hb-calculator *{box-sizing:border-box}
+    #hb-calculator{font-family:Georgia, serif;color:var(--text);background:#fff;padding:0}
+    .hb-wrap{max-width:960px;margin:0 auto}
+    .hb-title{font-weight:800;font-size:clamp(28px,4vw,40px);margin:0 0 8px;color:var(--primary)}
+    .hb-sub{color:var(--muted);margin:0 0 24px}
+    .hb-progress{margin-bottom:20px}
+    .hb-bar{height:10px;background:#fff;border-radius:999px;overflow:hidden;box-shadow:inset 0 0 0 1px #e2e8f0}
+    .hb-fill{height:100%;background:linear-gradient(90deg,var(--primary),var(--primary2));width:0%;transition:width .3s ease}
+    .hb-steps{display:flex;justify-content:space-between;margin-top:8px;font-size:12px;color:var(--muted)}
+    .hb-steps span.active{color:var(--primary);font-weight:600}
+    .hb-panel{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:24px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+    .hb-section-title{font-size:20px;font-weight:700;margin:0 0 8px;color:var(--primary)}
+    .hb-section-sub{color:var(--muted);margin:0 0 16px}
+    .grid{display:grid;gap:16px}
+    .g-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .g-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    @media (max-width:820px){.g-2,.g-3{grid-template-columns:1fr}}
+    .field{display:flex;flex-direction:column;gap:6px}
+    .label{font-size:14px;font-weight:600}
+    .hint{color:var(--muted);font-size:12px}
+    .input,.select,.textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid #cbd5e1;background:#fff;outline:none}
+    .input:focus,.select:focus,.textarea:focus{border-color:var(--primary);box-shadow:0 0 0 3px var(--ring)}
+    .muted{color:#475569}
+    .calc-read{background:#f8fafc;border:1px solid #e2e8f0;color:#334155;font-weight:600}
+    .pill{padding:12px;border-radius:12px;border:2px solid #e5e7eb;text-align:left;cursor:pointer;background:#fff;transition:.2s ease}
+    .pill:hover{box-shadow:0 6px 20px rgba(2,6,23,.06)}
+    .pill.active{border-color:var(--primary);background:#f0f8ff;box-shadow:0 8px 24px rgba(26,54,93,.1)}
+    .pill .icon{font-size:28px;margin-bottom:8px}
+    .est-box{background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px;text-align:center}
+    .est-box.emph{border-width:2px;border-color:var(--primary)}
+    .t-con{color:#16a34a;font-weight:800}
+    .t-mid{color:var(--primary);font-weight:900;font-size:22px}
+    .t-prem{color:var(--orange);font-weight:800}
+    .tag{display:inline-block;padding:4px 8px;border-radius:999px;background:#ecfeff;border:1px solid #a5f3fc;color:#0369a1;font-size:12px}
+    .row{display:flex;gap:12px;justify-content:space-between;font-size:14px;color:#475569}
+    .btns{display:flex;justify-content:space-between;gap:12px;margin-top:18px}
+    .btn{border-radius:12px;padding:12px 18px;border:1px solid #cbd5e1;background:#fff;cursor:pointer;transition:.2s ease}
+    .btn:hover{background:#f8fafc}
+    .btn.primary{background:linear-gradient(90deg,var(--primary),var(--primary2));color:#fff;border:none;box-shadow:0 10px 24px rgba(26,54,93,.2)}
+    .btn.primary:hover{filter:brightness(.95)}
+    .btn:disabled{opacity:.5;cursor:not-allowed}
+    .hidden{display:none !important}
+    .ok{color:#16a34a}
+    .warn{color:#b45309}
+  </style>
+
+  <!-- Scripts: nav, fade-ins, services bg rotation, calculator -->
+  <script>
+    // Fade-in on scroll
+    const io = new IntersectionObserver((entries)=>entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); }),{threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    window.addEventListener('DOMContentLoaded', ()=>{
+      document.querySelectorAll('.fade-in').forEach(el=>io.observe(el));
+
+      // Smooth anchor scroll (account for sticky header)
+      const headerOffset = 86;
+      document.querySelectorAll('a[href^="#"]').forEach(link=>{
+        link.addEventListener('click', (e)=>{
+          const id = link.getAttribute('href');
+          if(!id || id === '#') return;
+          const target = document.querySelector(id);
+          if(!target) return;
+          e.preventDefault();
+          const y = target.getBoundingClientRect().top + window.scrollY - headerOffset;
+          window.scrollTo({top:y, behavior:'smooth'});
+        });
+      });
+
+      // Header elevation on scroll
+      const hdr = document.querySelector('.header');
+      const onScroll = ()=>{ hdr.style.boxShadow = window.scrollY>60 ? '0 8px 24px rgba(0,0,0,.12)' : 'none'; };
+      onScroll(); window.addEventListener('scroll', onScroll);
+
+      // Mobile menu
+      const toggle = document.getElementById('navToggle');
+      const menu = document.getElementById('mobileMenu');
+      const setOpen = (open)=>{ menu.classList.toggle('open', open); toggle.setAttribute('aria-expanded', open?'true':'false'); document.body.style.overflow = open ? 'hidden' : ''; };
+      toggle.addEventListener('click', ()=> setOpen(!menu.classList.contains('open')));
+      menu.querySelectorAll('[data-nav-close]').forEach(a=> a.addEventListener('click', ()=> setOpen(false)));
+      document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') setOpen(false); });
+
+      // Renovations hero rotating backgrounds (your 3 kitchen images)
+      const reno = document.getElementById('renoBg');
+      const renoImages = [
+        "https://img1.wsimg.com/isteam/ip/111e2203-c8e6-4588-acfc-521f62348879/09a8dd7e-59a2-414a-b97a-f39054128a03/:/rs=w:1280",
+        "https://img1.wsimg.com/isteam/ip/111e2203-c8e6-4588-acfc-521f62348879/9308c6d3-7bdc-497c-a3d6-1d315f120ca5/:/rs=w:1280",
+        "https://img1.wsimg.com/isteam/ip/111e2203-c8e6-4588-acfc-521f62348879/91bf5636-6fb9-4d46-a0b3-ebe0db026595/:/rs=w:1280"
+      ];
+      let renoIdx = 0;
+      function setReno(i){
+        reno.style.transition = 'opacity .6s ease';
+        reno.style.opacity = '0';
+        setTimeout(()=>{
+          reno.style.backgroundImage = `url('${renoImages[i]}')`;
+          reno.style.opacity = '1';
+        }, 300);
+      }
+      // Preload images to avoid flash
+      renoImages.forEach(src => { const img = new Image(); img.src = src; });
+      setReno(renoIdx);
+      setInterval(()=>{ renoIdx = (renoIdx+1)%renoImages.length; setReno(renoIdx); }, 5000);
+    });
+  </script>
+
+  <!-- Calculator (original logic preserved) -->
+  <script>
+  (function(){
+    const DEFAULTS = {
+      laborMultiplier: 1.0,
+      materialMultiplier: 1.0,
+      roofingBasePerSquare: 525,
+      roofingTearOffPerSquare: 95,
+      roofingComplexity: { simple: 1.0, complex: 1.25, very_complex: 1.45 },
+      roofingMaterialFactor: {
+        asphalt_3tab: 0.9,
+        architectural: 1.0,
+        metal_standing: 2.2,
+        cedar: 1.8,
+        slate_synthetic: 2.6
+      },
+      deckCostPerSqft: { standard_pt: 55, popular_comp: 85, premium_comp: 110 },
+      deckStairsAdder: 1200,
+      deckRailingLFPerFt: { none: 0, basic: 25, metal: 60 },
+      bathBase: {
+        powder: { standard: 8000, popular: 12000, premium: 18000 },
+        guest_full: { standard: 18000, popular: 28000, premium: 40000 },
+        primary: { standard: 35000, popular: 55000, premium: 80000 }
+      },
+      bathLayoutFactor: { none: 1.0, minor: 1.15, major: 1.35 },
+      bathShowerAdder: { tub_shower: 0, walk_in_tile: 7000, curbless_tile: 12000 },
+      vanityPerFoot: { standard: 350, popular: 600, premium: 900 }
+    };
+
+    const state = {
+      step: 0,
+      project: "",
+      address: { address: "", propertyType: "single_family", homeAge: "10-30years", stories: "2" },
+      details: {},
+      contact: {}
+    };
+
+    const $root = document.getElementById("hb-calculator");
+    const currency = n => new Intl.NumberFormat("en-US",{style:"currency",currency:"USD",maximumFractionDigits:0}).format(Math.round(n||0));
+    const clamp = (n,min,max)=>Math.max(min,Math.min(max,n));
+    const progressPct = () => ((state.step + 1) / 5) * 100;
+    const isValidAddress = () => state.address.address && state.address.address.trim().length > 6;
+    const isValidProject = () => !!state.project;
+    const isValidContact = () => { const c = state.contact; return c.firstName && c.lastName && c.email && /.+@.+\..+/.test(c.email); };
+
+    function estimateRoofing(v){
+      const squares = Math.max(1, Math.round(((Number(v.roofSqft)||2200)/100)*10)/10);
+      const base = DEFAULTS.roofingBasePerSquare*DEFAULTS.laborMultiplier*DEFAULTS.materialMultiplier;
+      const material = v.material || "architectural";
+      const complexity = v.complexity || "complex";
+      const mf = DEFAULTS.roofingMaterialFactor[material] || 1;
+      const cf = DEFAULTS.roofingComplexity[complexity] || 1.25;
+      const tear = (v.tearOff ?? true) ? DEFAULTS.roofingTearOffPerSquare : 0;
+      const perSquare = base*mf*cf + tear;
+      const mid = perSquare * squares;
+      return { low: mid*0.92, mid, high: mid*1.08, perSquare, squares };
+    }
+    function estimateDeck(v){
+      const sqft = Number(v.deckSqft)||300;
+      const mat = v.material || "popular_comp";
+      const deckCost = (DEFAULTS.deckCostPerSqft[mat]||85)*sqft*DEFAULTS.laborMultiplier*DEFAULTS.materialMultiplier;
+      const stairsCost = (v.stairs ?? true) ? DEFAULTS.deckStairsAdder : 0;
+      const rType = v.railing || "basic";
+      const railingCost = (DEFAULTS.deckRailingLFPerFt[rType]||0) * (v.railingFeet||40);
+      const total = deckCost + stairsCost + railingCost;
+      return { low: total*0.9, mid: total, high: total*1.1, breakdown:{deck:deckCost, stairs:stairsCost, railing:railingCost} };
+    }
+    function estimateBath(v){
+      const type = v.bathType || "guest_full";
+      const finish = v.finishLevel || "popular";
+      const base = (DEFAULTS.bathBase[type]||{})[finish] || 28000;
+      const lf = DEFAULTS.bathLayoutFactor[v.layoutChange || "minor"] || 1.15;
+      const shower = DEFAULTS.bathShowerAdder[v.showerType || "tub_shower"] || 0;
+      const vanity = (DEFAULTS.vanityPerFoot[finish]||0) * (Number(v.vanityLength)||5);
+      const total = base*lf*DEFAULTS.laborMultiplier*DEFAULTS.materialMultiplier + shower + vanity;
+      return { low: total*0.85, mid: total, high: total*1.25, breakdown:{base:base*lf, shower, vanity} };
+    }
+    function currentEstimate(){
+      if(state.project==="roofing") return estimateRoofing(state.details);
+      if(state.project==="deck") return estimateDeck(state.details);
+      if(state.project==="bathroom") return estimateBath(state.details);
+      return null;
+    }
+
+    function header(){
+      return `
+        <div class="hb-wrap">
+          <h1 class="hb-title">Project Cost Calculator</h1>
+          <p class="hb-sub">Get accurate estimates for your home improvement project</p>
+          <div class="hb-progress">
+            <div class="hb-bar"><div class="hb-fill" style="width:${progressPct()}%"></div></div>
+            <div class="hb-steps">
+              <span class="${state.step>=0?'active':''}">Address</span>
+              <span class="${state.step>=1?'active':''}">Project</span>
+              <span class="${state.step>=2?'active':''}">Details</span>
+              <span class="${state.step>=3?'active':''}">Contact</span>
+              <span class="${state.step>=4?'active':''}">Review</span>
+            </div>
+          </div>
+          <div class="hb-panel">${sectionContent()}</div>
+          <div class="btns">
+            <button class="btn" id="hb-prev" ${state.step===0?'disabled':''}>← Previous</button>
+            <button class="btn primary" id="hb-next">${state.step===4?'Submit Request':'Next →'}</button>
+          </div>
+        </div>
+      `;
+    }
+    const projectDefs = [
+      {id:"roofing", name:"Roofing Replacement", icon:"🏠", desc:"Complete roof replacement with quality materials"},
+      {id:"deck", name:"Deck Construction", icon:"🏗️", desc:"Custom deck building and installation"},
+      {id:"bathroom", name:"Bathroom Remodel", icon:"🚿", desc:"Complete bathroom renovation"}
+    ];
+    function titleForStep(){
+      if(state.step===0) return "Project Location";
+      if(state.step===1) return "What project are you planning?";
+      if(state.step===2) return (projectDefs.find(p=>p.id===state.project)?.name || "Project") + " Details";
+      if(state.step===3) return "Contact Information";
+      if(state.step===4) return "Review & Submit";
+      return "Project Calculator";
+    }
+    function sectionContent(){ return `<div><div class="hb-section-title">${titleForStep()}</div>${stepBody()}</div>`; }
+    function stepBody(){
+      switch(state.step){
+        case 0: return addressStep();
+        case 1: return projectStep();
+        case 2: return detailsStep();
+        case 3: return contactStep();
+        case 4: return reviewStep();
+        default: return '';
+      }
+    }
+    function addressStep(){
+      const v = state.address;
+      return `
+        <div class="hb-section-sub">Enter the address where your project will take place</div>
+        <div class="grid g-1">
+          <div class="field">
+            <label class="label">Property Address *</label>
+            <input class="input" id="addr-address" placeholder="123 Main Street, City, ST 12345" value="${escapeHtml(v.address||'')}">
+            <div class="hint">${isValidAddress()?'<span class="ok">Looks good ✔️</span>':'Start typing your address'}</div>
+          </div>
+        </div>
+        <div class="grid g-3" style="margin-top:12px">
+          <div class="field">
+            <label class="label">Property Type</label>
+            <select class="select" id="addr-type">
+              ${options([["single_family","Single Family Home"],["townhouse","Townhouse"],["condo","Condominium"],["duplex","Duplex"],["commercial","Commercial Property"]], v.propertyType||"single_family")}
+            </select>
+          </div>
+          <div class="field">
+            <label class="label">Home Age (approx.)</label>
+            <select class="select" id="addr-age">
+              ${options([["new","Less than 5 years"],["5-10years","5-10 years"],["10-30years","10-30 years"],["30-50years","30-50 years"],["50years+","50+ years"]], v.homeAge||"10-30years")}
+            </select>
+          </div>
+          <div class="field">
+            <label class="label">Stories</label>
+            <select class="select" id="addr-stories">
+              ${options([["1","1 Story"],["2","2 Stories"],["3","3+ Stories"]], v.stories||"2")}
+            </select>
+          </div>
+        </div>
+      `;
+    }
+    function projectStep(){
+      return `
+        <p class="hb-section-sub">Choose the type of project you're planning:</p>
+        <div class="grid g-3">
+          ${projectDefs.map(p => `
+            <button class="pill ${state.project===p.id?'active':''}" data-project="${p.id}">
+              <div class="icon">${p.icon}</div>
+              <div style="font-weight:700">${p.name}</div>
+              <div class="muted" style="font-size:14px">${p.desc}</div>
+            </button>
+          `).join('')}
+        </div>
+      `;
+    }
+    function detailsStep(){
+      if(state.project==="roofing") return roofingDetails();
+      if(state.project==="deck") return deckDetails();
+      if(state.project==="bathroom") return bathDetails();
+      return `<div class="muted">Please select a project type first.</div>`;
+    }
+    function roofingDetails(){
+      const v = state.details;
+      const est = estimateRoofing(v);
+      return `
+        <div class="grid g-2">
+          <div class="field">
+            <label class="label">Roof area (sq.ft)</label>
+            <input class="input" id="roof-sqft" type="number" min="300" max="20000" step="50" value="${Number(v.roofSqft??2200)}">
+            <div class="hint">Typical home: 1,800–3,000 sq.ft</div>
+          </div>
+          <div class="field">
+            <label class="label">Tear-off existing roof?</label>
+            <select class="select" id="roof-tear">
+              ${options([["yes","Yes — remove & dispose (Most common)"],["no","No — overlay (if code allows)"]], (v.tearOff??true)?"yes":"no")}
+            </select>
+          </div>
+        </div>
+        <div class="grid g-3" style="margin-top:12px">
+          <div class="field">
+            <label class="label">Material</label>
+            <select class="select" id="roof-mat">
+              ${options([
+                ["asphalt_3tab","Asphalt 3-Tab — Standard"],
+                ["architectural","Architectural Asphalt — Most Popular"],
+                ["metal_standing","Standing-Seam Metal — Premium"],
+                ["cedar","Cedar Shake — Premium"],
+                ["slate_synthetic","Slate (Synthetic) — Luxury"]
+              ], v.material||"architectural")}
+            </select>
+          </div>
+          <div class="field">
+            <label class="label">Roof complexity</label>
+            <select class="select" id="roof-cx">
+              ${options([
+                ["simple","Simple (low pitch, few planes)"],
+                ["complex","Complex — Most Popular"],
+                ["very_complex","Very Complex (steep/many planes)"]
+              ], v.complexity||"complex")}
+            </select>
+          </div>
+          <div class="field">
+            <label class="label">Calculated</label>
+            <input class="input calc-read" disabled value="${est.squares} squares @ ${currency(est.perSquare)}/sq.">
+          </div>
+        </div>
+        ${estimateBlock(est, "blue")}
+      `;
+    }
+    function deckDetails(){
+      const v = state.details;
+      const est = estimateDeck(v);
+      return `
+        <div class="grid g-2">
+          <div class="field">
+            <label class="label">Deck size (sq.ft)</label>
+            <input class="input" id="deck-sqft" type="number" min="100" max="2000" step="25" value="${Number(v.deckSqft??300)}">
+            <div class="hint">Typical deck: 200–500 sq.ft</div>
+          </div>
+          <div class="field">
+            <label class="label">Railing length (linear ft)</label>
+            <input class="input" id="deck-rail-ft" type="number" min="0" max="200" step="5" value="${Number(v.railingFeet??40)}">
+            <div class="hint">Perimeter needing railings</div>
+          </div>
+        </div>
+        <div class="grid g-3" style="margin-top:12px">
+          <div class="field">
+            <label class="label">Decking Material</label>
+            <select class="select" id="deck-mat">
+              ${options([
+                ["standard_pt","Pressure Treated — Standard"],
+                ["popular_comp","Composite Boards — Most Popular"],
+                ["premium_comp","Premium Composite — Luxury"]
+              ], v.material||"popular_comp")}
+            </select>
+          </div>
+          <div class="field">
+            <label class="label">Stairs included?</label>
+            <select class="select" id="deck-stairs">
+              ${options([["yes","Yes — Standard stairs"],["no","No stairs needed"]], (v.stairs??true)?"yes":"no")}
+            </select>
+          </div>
+          <div class="field">
+            <label class="label">Railing type</label>
+            <select class="select" id="deck-rail-type">
+              ${options([["none","No railings"],["basic","Basic wood — Most Popular"],["metal","Metal/Cable — Premium"]], v.railing||"basic")}
+            </select>
+          </div>
+        </div>
+        ${estimateBlock(est, "green", est.breakdown)}
+      `;
+    }
+    function bathDetails(){
+      const v = state.details;
+      const est = estimateBath(v);
+      return `
+        <div class="grid g-2">
+          <div class="field">
+            <label class="label">Bathroom type</label>
+            <select class="select" id="bath-type">
+              ${options([["powder","Powder room (½ bath)"],["guest_full","Guest full bath — Most Popular"],["primary","Primary suite bathroom"]], v.bathType||"guest_full")}
+            </select>
+          </div>
+          <div class="field">
+            <label class="label">Finish level</label>
+            <select class="select" id="bath-finish">
+              ${options([["standard","Standard finishes"],["popular","Popular finishes — Most Popular"],["premium","Premium finishes"]], v.finishLevel||"popular")}
+            </select>
+          </div>
+        </div>
+        <div class="grid g-3" style="margin-top:12px">
+          <div class="field">
+            <label class="label">Layout changes</label>
+            <select class="select" id="bath-layout">
+              ${options([["none","Keep existing layout"],["minor","Minor changes — Most Popular"],["major","Major layout changes"]], v.layoutChange||"minor")}
+            </select>
+          </div>
+          <div class="field">
+            <label class="label">Shower type</label>
+            <select class="select" id="bath-shower">
+              ${options([["tub_shower","Standard tub/shower"],["walk_in_tile","Walk-in tile shower"],["curbless_tile","Curbless tile shower — Premium"]], v.showerType||"tub_shower")}
+            </select>
+          </div>
+          <div class="field">
+            <label class="label">Vanity length (feet)</label>
+            <input class="input" id="bath-vanity" type="number" min="2" max="12" step="1" value="${Number(v.vanityLength??5)}">
+          </div>
+        </div>
+        ${estimateBlock(est, "purple", est.breakdown)}
+      `;
+    }
+    function reviewStep(){
+      const project = projectDefs.find(p=>p.id===state.project);
+      const est = currentEstimate();
+      return `
+        <div class="grid g-1" style="gap:18px">
+          <div style="background:linear-gradient(90deg,#f8fafc,#eef2ff);border:1px solid #e5e7eb;border-radius:12px;padding:16px">
+            <div style="font-weight:700;margin-bottom:10px;color:var(--primary);">Project Summary</div>
+            <div class="grid g-2" style="font-size:14px;color:#334155">
+              <div><strong>Address:</strong> ${escapeHtml(state.address.address||"—")}</div>
+              <div><strong>Project:</strong> ${project?project.name:"—"}</div>
+              <div><strong>Contact:</strong> ${(state.contact.firstName||"")} ${(state.contact.lastName||"")}</div>
+              <div><strong>Email:</strong> ${state.contact.email||"—"}</div>
+              <div><strong>Phone:</strong> ${state.contact.phone||"Not provided"}</div>
+              <div><strong>Timeline:</strong> ${state.contact.timeline||"—"}</div>
+            </div>
+          </div>
+          ${est ? `
+            <div style="background:#f0f9ff;border:1px solid #bae6fd;border-radius:12px;padding:16px">
+              <div class="row"><span class="tag">Estimated Cost Range</span></div>
+              <div class="grid g-3" style="margin-top:12px">
+                <div class="est-box"><div class="muted">Conservative</div><div class="t-con">${currency(est.low)}</div></div>
+                <div class="est-box emph"><div style="color:var(--primary);font-weight:700">Most Likely</div><div class="t-mid">${currency(est.mid)}</div></div>
+                <div class="est-box"><div class="muted">Premium</div><div class="t-prem">${currency(est.high)}</div></div>
+              </div>
+            </div>
+            <div style="background:linear-gradient(135deg,#1a365d,#2d5a87);color:#fff;border-radius:12px;padding:16px;text-align:center">
+              <div style="font-size:1.05rem;margin-bottom:6px;">✨ <strong>DiFiore Promise</strong> ✨</div>
+              <p style="margin:0;opacity:.95;font-size:.95rem;">Every estimate includes our commitment to faith-based service, quality materials, and workmanship warranty</p>
+              <div style="margin-top:.5rem;display:inline-flex;gap:.5rem;flex-wrap:wrap">
+                <span class="tag">Since 2003</span><span class="tag">Licensed & Insured</span>
+              </div>
+            </div>
+          `:''}
+          <div style="text-align:center;margin-top:6px">
+            <button class="btn primary" id="hb-submit" style="font-size:1.05rem;padding:.9rem 1.4rem;">Submit Project Request 🙏</button>
+          </div>
+        </div>
+      `;
+    }
+    function estimateBlock(est,color,breakdown){
+      const bg = color==="green" ? "linear-gradient(90deg,#ecfdf5,#d1fae5)" : color==="purple" ? "linear-gradient(90deg,#faf5ff,#fce7f3)" : "linear-gradient(90deg,#eff6ff,#e0e7ff)";
+      const border = color==="green" ? "#bbf7d0" : color==="purple" ? "#e9d5ff" : "#bfdbfe";
+      return `
+        <div style="background:${bg};border:1px solid ${border};border-radius:12px;padding:16px;margin-top:12px">
+          <div class="grid g-3" style="text-align:center;margin-bottom:8px">
+            <div class="est-box"><div class="muted">Conservative</div><div class="t-con">${currency(est.low)}</div></div>
+            <div class="est-box emph"><div style="color:var(--primary);font-weight:700">Most Likely</div><div class="t-mid">${currency(est.mid)}</div></div>
+            <div class="est-box"><div class="muted">Premium</div><div class="t-prem">${currency(est.high)}</div></div>
+          </div>
+          ${breakdown ? `
+            <div class="grid g-3" style="font-size:14px;color:#475569">
+              ${breakdown.deck!==undefined?`<div>Decking: <strong>${currency(breakdown.deck)}</strong></div>`:''}
+              ${breakdown.stairs!==undefined?`<div>Stairs: <strong>${currency(breakdown.stairs)}</strong></div>`:''}
+              ${breakdown.railing!==undefined?`<div>Railing: <strong>${currency(breakdown.railing)}</strong></div>`:''}
+              ${breakdown.base!==undefined?`<div>Base: <strong>${currency(breakdown.base)}</strong></div>`:''}
+              ${breakdown.shower!==undefined?`<div>Shower: <strong>${currency(breakdown.shower)}</strong></div>`:''}
+              ${breakdown.vanity!==undefined?`<div>Vanity: <strong>${currency(breakdown.vanity)}</strong></div>`:''}
+            </div>`:''}
+        </div>
+      `;
+    }
+    const escMap={'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}; const escapeHtml=s=>String(s).replace(/[&<>"']/g,ch=>escMap[ch]);
+    function options(arr,value){return arr.map(([v,l])=>`<option value="${v}" ${value===v?'selected':''}>${l}</option>`).join('')}
+
+    function render(){
+      $root.innerHTML = header();
+      $root.querySelector("#hb-prev").addEventListener("click", ()=>{ state.step = Math.max(0, state.step-1); render(); });
+      $root.querySelector("#hb-next").addEventListener("click", ()=>{
+        if(state.step===0 && !isValidAddress()){ alert("Please enter a valid address."); return; }
+        if(state.step===1 && !isValidProject()){ alert("Please select a project type first."); return; }
+        if(state.step===3 && !isValidContact()){ alert("Please fill in required contact information."); return; }
+        if(state.step===4){
+          const method = state.contact.contactPreference || "email";
+          const project = projectDefs.find(p=>p.id===state.project);
+          const est = currentEstimate();
+          alert(`🙏 Thank you ${state.contact.firstName||""}! Your ${project?.name||"project"} estimate for ${state.address.address||"your property"} has been submitted.\n\nEstimated range: ${est ? currency(est.low) + ' - ' + currency(est.high) : 'TBD'}\n\nWe'll contact you within 24 hours via ${method} to discuss your project. God bless!`);
+          return;
+        }
+        state.step = Math.min(4, state.step+1); render();
+      });
+
+      if(state.step===0){
+        const a=state.address;
+        bind("#addr-address","input",e=>{a.address=e.target.value;});
+        bind("#addr-type","change",e=>{a.propertyType=e.target.value;});
+        bind("#addr-age","change",e=>{a.homeAge=e.target.value;});
+        bind("#addr-stories","change",e=>{a.stories=e.target.value;});
+      }
+      if(state.step===1){
+        $root.querySelectorAll("[data-project]").forEach(btn=>{
+          btn.addEventListener("click", ()=>{ state.project = btn.getAttribute("data-project"); state.details = {}; render(); });
+        });
+      }
+      if(state.step===2){
+        if(state.project==="roofing"){
+          const d=state.details; const bindRoof=()=>{ d.roofSqft=clamp(Number(val("#roof-sqft")),300,20000); d.tearOff=val("#roof-tear")==="yes"; d.material=val("#roof-mat"); d.complexity=val("#roof-cx"); render(); };
+          ["#roof-sqft","#roof-tear","#roof-mat","#roof-cx"].forEach(sel=>{ bind(sel,"input",bindRoof); bind(sel,"change",bindRoof); });
+        }
+        if(state.project==="deck"){
+          const d=state.details; const bindDeck=()=>{ d.deckSqft=clamp(Number(val("#deck-sqft")),100,2000); d.railingFeet=clamp(Number(val("#deck-rail-ft")),0,200); d.material=val("#deck-mat"); d.stairs=val("#deck-stairs")==="yes"; d.railing=val("#deck-rail-type"); render(); };
+          ["#deck-sqft","#deck-rail-ft","#deck-mat","#deck-stairs","#deck-rail-type"].forEach(sel=>{ bind(sel,"input",bindDeck); bind(sel,"change",bindDeck); });
+        }
+        if(state.project==="bathroom"){
+          const d=state.details; const bindBath=()=>{ d.bathType=val("#bath-type"); d.finishLevel=val("#bath-finish"); d.layoutChange=val("#bath-layout"); d.showerType=val("#bath-shower"); d.vanityLength=clamp(Number(val("#bath-vanity")),2,12); render(); };
+          ["#bath-type","#bath-finish","#bath-layout","#bath-shower","#bath-vanity"].forEach(sel=>{ bind(sel,"input",bindBath); bind(sel,"change",bindBath); });
+        }
+      }
+      if(state.step===3){
+        const map={"#c-first":"firstName","#c-last":"lastName","#c-email":"email","#c-phone":"phone","#c-pref":"contactPreference","#c-best":"bestTime","#c-time":"timeline","#c-notes":"notes"};
+        Object.entries(map).forEach(([sel,key])=>{ bind(sel,"input",e=>state.contact[key]=e.target.value); bind(sel,"change",e=>state.contact[key]=e.target.value); });
+      }
+      if(state.step===4){
+        const btn=$root.querySelector("#hb-submit");
+        if(btn){ btn.addEventListener("click", ()=>{ const method=state.contact.contactPreference || "email"; const project=projectDefs.find(p=>p.id===state.project); const est=currentEstimate(); alert(`🙏 Thank you ${state.contact.firstName||""}! Your ${project?.name||"project"} estimate for ${state.address.address||"your property"} has been submitted.\n\nEstimated range: ${est ? currency(est.low) + ' - ' + currency(est.high) : 'TBD'}\n\nWe'll contact you within 24 hours via ${method} to discuss your project. God bless!`); }); }
+      }
+    }
+    function contactStep(){
+      const c = state.contact;
+      return `
+        <div class="hb-section-sub">Let's connect! We'd love to discuss your project and provide a detailed estimate.</div>
+        <div class="grid g-2">
+          <div class="field">
+            <label class="label">First Name *</label>
+            <input class="input" id="c-first" value="${escapeHtml(c.firstName||'')}" placeholder="John">
+          </div>
+          <div class="field">
+            <label class="label">Last Name *</label>
+            <input class="input" id="c-last" value="${escapeHtml(c.lastName||'')}" placeholder="Smith">
+          </div>
+        </div>
+        <div class="grid g-2" style="margin-top:12px">
+          <div class="field">
+            <label class="label">Email *</label>
+            <input class="input" id="c-email" value="${escapeHtml(c.email||'')}" placeholder="john@email.com">
+          </div>
+          <div class="field">
+            <label class="label">Phone</label>
+            <input class="input" id="c-phone" value="${escapeHtml(c.phone||'')}" placeholder="(555) 123-4567">
+          </div>
+        </div>
+        <div class="field" style="margin-top:12px">
+          <label class="label">Preferred contact method</label>
+          <select class="select" id="c-pref">
+            ${options([["email","Email — Most Popular"],["phone","Phone call"],["text","Text message"],["either","Either phone or email"]], c.contactPreference||"email")}
+          </select>
+        </div>
+        <div class="grid g-2" style="margin-top:12px">
+          <div class="field">
+            <label class="label">Best time to contact</label>
+            <select class="select" id="c-best">
+              ${options([["morning","Morning (8am-12pm)"],["afternoon","Afternoon (12pm-5pm)"],["evening","Evening (5pm-8pm)"],["anytime","Anytime — Most Popular"]], c.bestTime||"anytime")}
+            </select>
+          </div>
+          <div class="field">
+            <label class="label">Timeline</label>
+            <select class="select" id="c-time">
+              ${options([["asap","ASAP (within 1 month)"],["1-3months","1-3 months"],["3-6months","3-6 months — Most Popular"],["6months+","6+ months (planning ahead)"]], c.timeline||"3-6months")}
+            </select>
+          </div>
+        </div>
+        <div class="field" style="margin-top:12px">
+          <label class="label">Notes (optional)</label>
+          <textarea class="textarea" id="c-notes" rows="3" placeholder="Tell us about your vision, any special requirements, or questions you have...">${escapeHtml(c.notes||'')}</textarea>
+        </div>
+        <div style="background:#f0f9ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px;margin-top:12px;text-align:center;color:var(--primary)">
+          <small>🤝 <strong>Our Promise:</strong> We'll contact you within 24 hours with a detailed estimate and answer any questions you have.</small>
+        </div>
+      `;
+    }
+    function bind(sel,evt,fn){ const el=document.querySelector(sel); if(el) el.addEventListener(evt,fn); }
+    function val(sel){ const el=document.querySelector(sel); return el ? el.value : ''; }
+    render();
+  })();
+  </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>DiFiore Builders — Faith, Family, Quality Craftsmanship</title>
+
+  <style>
+    :root{
+      --primary:#1a365d;
+      --secondary:#2d5a87;
+      --accent:#c7962c;
+      --accent-700:#b8862a;
+      --accent-light:#f1e2b8;
+      --text-dark:#1a202c;
+      --text-light:#4a5568;
+      --bg-light:#f7fafc;
+      --white:#ffffff;
+      --shadow:rgba(0,0,0,.1);
+      --shadow-strong:rgba(0,0,0,.2);
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{font-family:Georgia, serif; color:var(--text-dark); line-height:1.6; background:#fff; overflow-x:hidden}
+
+    /* Accessibility */
+    .skip-link{position:absolute;top:-40px;left:0;background:#000;color:#fff;padding:.5rem .75rem;z-index:2000;border-radius:0 0 .4rem .4rem}
+    .skip-link:focus{top:0}
+
+    /* Topbar */
+    .topbar{background:#0f2746;color:#e6edf7;font-size:.9rem}
+    .topbar .topbar-inner{max-width:1200px;margin:0 auto;padding:.4rem 1rem;display:flex;align-items:center;justify-content:space-between;gap:.75rem;flex-wrap:wrap}
+    .since-pill{display:inline-flex;align-items:center;gap:.4rem;background:rgba(199,150,44,.15);color:#ffe9b1;border:1px solid rgba(199,150,44,.35);padding:.25rem .6rem;border-radius:999px;font-weight:700}
+
+    /* Header */
+    .header{position:sticky;top:0;width:100%;background:rgba(26,54,93,.95);backdrop-filter:blur(10px);z-index:1000;transition:box-shadow .3s ease}
+    .nav{max-width:1200px;margin:0 auto;padding:.9rem 1rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .brand{display:flex;align-items:center;gap:.75rem;text-decoration:none;color:#fff}
+    .logo-mark{width:36px;height:36px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),#e8c468);color:#1a1a1a;border-radius:8px;font-weight:900;box-shadow:0 6px 18px rgba(199,150,44,.35)}
+    .logo-text{font-size:1.35rem;font-weight:800}
+    .nav-links{list-style:none;display:flex;gap:1.5rem}
+    .nav-links a{color:#fff;text-decoration:none;font-weight:600}
+    .nav-links a:hover{color:var(--accent)}
+    .cta-button{background:var(--accent);color:#fff;padding:.65rem 1rem;border:none;border-radius:8px;font-weight:800;text-decoration:none;cursor:pointer;transition:.2s}
+    .cta-button:hover{background:var(--accent-700);transform:translateY(-1px);box-shadow:0 6px 16px rgba(199,150,44,.35)}
+    .mobile-toggle{display:none;appearance:none;border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;padding:.55rem .65rem;border-radius:8px;cursor:pointer}
+    .hambar{display:block;width:22px;height:2px;background:#fff;position:relative}
+    .hambar::before,.hambar::after{content:"";position:absolute;left:0;right:0;height:2px;background:#fff}
+    .hambar::before{top:-6px}.hambar::after{top:6px}
+    .mobile-menu{display:none;background:rgba(26,54,93,.98);border-top:1px solid rgba(255,255,255,.12)}
+    .mobile-menu.open{display:block}
+    .mobile-menu ul{list-style:none;padding:.5rem 1rem}
+    .mobile-menu a{display:block;padding:.75rem .5rem;color:#fff;text-decoration:none;border-radius:6px}
+    .mobile-menu a:hover{background:rgba(255,255,255,.06)}
+    .mobile-cta{padding:.75rem 1rem 1rem}
+
+    /* Hero */
+    .hero{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;padding:112px 1rem 80px;text-align:center;position:relative;overflow:hidden}
+    .hero::before{content:"";position:absolute;inset:0;background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="g" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="0.5" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="0.3" fill="rgba(255,255,255,0.05)"/><circle cx="50" cy="10" r="0.4" fill="rgba(255,255,255,0.08)"/></pattern></defs><rect width="100" height="100" fill="url(%23g)"/></svg>') center/cover no-repeat;opacity:.3}
+    .hero-content{max-width:860px;margin:0 auto;position:relative;z-index:1}
+    .hero h1{font-size:clamp(2.2rem,4.8vw,4rem);margin-bottom:.6rem;text-shadow:2px 2px 4px rgba(0,0,0,.3)}
+    .hero .subtitle{font-size:1.1rem;color:var(--accent-light);margin-bottom:.35rem}
+    .hero .tagline{font-size:1.05rem;opacity:.95;margin-bottom:1.2rem}
+    .since-badge{display:inline-flex;gap:.4rem;align-items:center;color:#0f2746;background:#ffefc7;border:1px solid #f2d58c;padding:.3rem .6rem;border-radius:999px;font-weight:800;margin-bottom:.75rem}
+    .btn-primary,.btn-secondary{padding:.9rem 1.4rem;border-radius:8px;font-weight:800;font-size:1.05rem;text-decoration:none;display:inline-block}
+    .btn-primary{background:var(--accent);color:#fff;box-shadow:0 10px 24px rgba(199,150,44,.35)}
+    .btn-primary:hover{background:var(--accent-700);transform:translateY(-1px)}
+    .btn-secondary{background:transparent;color:#fff;border:2px solid #fff}
+    .btn-secondary:hover{background:#fff;color:var(--primary)}
+    .faith-accent{position:relative}
+    .faith-accent::after{content:'✨';position:absolute;right:-22px;top:50%;transform:translateY(-50%);color:var(--accent);font-size:.85em}
+
+    /* About */
+    .about{padding:80px 1rem;background:#fff}
+    .container{max-width:1200px;margin:0 auto}
+    .about-content{display:grid;gap:2rem;grid-template-columns:1.05fr .95fr;align-items:center}
+    .about-text h2{font-size:clamp(1.6rem,3vw,2.2rem);color:var(--primary);margin-bottom:.6rem}
+    .about-text p{color:var(--text-light);margin-bottom:1rem;font-size:1.05rem}
+    .about-badge{display:inline-flex;gap:.4rem;align-items:center;background:rgba(199,150,44,.12);border:1px solid rgba(199,150,44,.35);color:#7a5a14;padding:.3rem .6rem;border-radius:999px;font-weight:700;margin:.25rem 0 1rem}
+    .about-image{border-radius:10px;overflow:hidden;box-shadow:0 10px 40px var(--shadow);position:relative;background:#000}
+    .about-image img{width:100%;height:100%;object-fit:cover;display:block;filter:contrast(1.02) saturate(1.02)}
+    .about-caption{position:absolute;bottom:14px;left:14px;right:14px;background:rgba(0,0,0,.65);color:#fff;padding:.8rem 1rem;border-radius:8px;text-align:center}
+
+    /* Pillars Banner */
+    .pillars{background:linear-gradient(90deg,#0e213b,#173a66);color:#fff;padding:28px 1rem}
+    .pillars-inner{max-width:1200px;margin:0 auto;display:grid;gap:1rem;grid-template-columns:repeat(3,1fr);align-items:center}
+    .pillar{display:flex;gap:.8rem;align-items:flex-start;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);padding:12px 14px;border-radius:10px}
+    .pillar .icon{font-size:1.25rem}
+    .pillar h4{margin:0;color:#ffefc7}
+    .pillar p{margin:2px 0 0;color:#d8e6ff;font-size:.95rem}
+    @media (max-width:860px){ .about-content{grid-template-columns:1fr} .pillars-inner{grid-template-columns:1fr} }
+
+    /* Service Hero Sections */
+    .services-intro{padding:48px 1rem;background:var(--bg-light);text-align:center}
+    .services-intro h2{font-size:clamp(1.8rem,3.2vw,2.4rem);color:var(--primary);margin-bottom:.35rem}
+    .services-intro p{color:var(--text-light)}
+    .service-hero{position:relative;min-height:56vh;display:grid;place-items:center;color:#fff;isolation:isolate}
+    .service-hero .bg{position:absolute;inset:0;background-size:cover;background-position:center;background-repeat:no-repeat;transform:scale(1.02)}
+    .service-hero .tint{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,18,30,.45),rgba(10,18,30,.65))}
+    .service-hero .content{position:relative;z-index:2;max-width:1100px;margin:0 auto;padding:48px 1rem;text-align:center}
+    .service-hero h3{font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:.6rem}
+    .service-meta{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;margin-bottom:1rem}
+    .meta-pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);padding:.3rem .6rem;border-radius:999px;font-weight:700}
+    .service-hero p.lead{max-width:820px;margin:0 auto 1rem;color:#eef4ff}
+    .service-bullets{max-width:900px;margin:0 auto 1.2rem;display:grid;gap:.5rem;grid-template-columns:repeat(3,1fr)}
+    .service-bullets li{list-style:none;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);padding:.55rem .7rem;border-radius:8px}
+    .service-cta{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+    .service-cta .btn-primary{box-shadow:none}
+    @media (max-width:900px){ .service-bullets{grid-template-columns:1fr} }
+
+    /* Parallax-ish on large screens */
+    @media (min-width:1024px){ .service-hero .bg{background-attachment:fixed} }
+
+    /* Calculator */
+    .calculator-section{padding:80px 1rem;background:var(--bg-light)}
+    .section-title{font-size:clamp(1.8rem,3vw,2.5rem);color:var(--primary);margin-bottom:.6rem}
+    .section-subtitle{font-size:1.1rem;color:var(--text-light)}
+    .calculator-header{text-align:center;margin-bottom:2rem}
+    .calculator-container{background:#fff;border-radius:14px;padding:1.2rem;box-shadow:0 10px 40px var(--shadow);max-width:1000px;margin:0 auto}
+
+    /* Footer */
+    .footer{background:var(--primary);color:#fff;padding:56px 1rem 28px}
+    .footer-content{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-bottom:1.5rem}
+    .footer-section h3{color:var(--accent);margin-bottom:.6rem}
+    .footer-section p,.footer-section li{color:rgba(255,255,255,.85);margin-bottom:.4rem}
+    .footer-section ul{list-style:none}
+    .footer a{color:rgba(255,255,255,.85);text-decoration:none}
+    .footer a:hover{color:var(--accent)}
+    .footer-badges{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.5rem}
+    .footer-pill{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);padding:.35rem .6rem;border-radius:999px;font-size:.9rem}
+    .footer-bottom{text-align:center;padding-top:1rem;border-top:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.7)}
+
+    /* Animations */
+    .fade-in{opacity:0;transform:translateY(24px);transition:all .6s ease}
+    .fade-in.visible{opacity:1;transform:translateY(0)}
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- Topbar -->
+  <div class="topbar" role="region" aria-label="Highlights">
+    <div class="topbar-inner">
+      <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
+        <span class="since-pill" aria-label="In business since 2003">🏅 Since 2003</span>
+        <span>Faith • Family • Quality Craftsmanship</span>
+      </div>
+      <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
+        <span>📍 Pennsylvania & Charlotte Metro</span>
+        <a href="#contact" aria-label="Contact">📧 info@difiorebuilders.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" role="banner">
+    <nav class="nav" aria-label="Primary">
+      <a href="#home" class="brand">
+        <span class="logo-mark" aria-hidden="true">DB</span>
+        <span class="logo-text">DiFiore Builders</span>
+      </a>
+      <ul class="nav-links" role="menubar">
+        <li role="none"><a role="menuitem" href="#home">Home</a></li>
+        <li role="none"><a role="menuitem" href="#about">About</a></li>
+        <li role="none"><a role="menuitem" href="#services">Services</a></li>
+        <li role="none"><a role="menuitem" href="#calculator">Calculator</a></li>
+        <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:.6rem">
+        <a class="cta-button" href="#calculator">Get Estimate</a>
+        <button class="mobile-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+          <span class="hambar" aria-hidden="true"></span>
+        </button>
+      </div>
+    </nav>
+    <div id="mobileMenu" class="mobile-menu" role="dialog" aria-label="Mobile menu">
+      <ul>
+        <li><a href="#home" data-nav-close>Home</a></li>
+        <li><a href="#about" data-nav-close>About</a></li>
+        <li><a href="#services" data-nav-close>Services</a></li>
+        <li><a href="#calculator" data-nav-close>Calculator</a></li>
+        <li><a href="#contact" data-nav-close>Contact</a></li>
+      </ul>
+      <div class="mobile-cta">
+        <a class="cta-button" href="#calculator" data-nav-close>Get Estimate</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="since-badge" aria-label="In business since 2003">🏆 In business since 2003</div>
+      <h1>Building Dreams with <span class="faith-accent">Faith</span> & Excellence</h1>
+      <p class="subtitle">Serving Pennsylvania • Expanding to Charlotte Metro</p>
+      <p class="tagline">Where quality craftsmanship meets unwavering integrity</p>
+      <div style="display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap">
+        <a href="#calculator" class="btn-primary">Get Your Estimate</a>
+        <a href="#about" class="btn-secondary">Our Story</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <main id="main">
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-content fade-in">
+          <div class="about-text">
+            <span class="about-badge">🏅 In Business Since 2003</span>
+            <h2>Full-Service General Construction — From Foundation to Roof</h2>
+            <p>A full-service general construction company established in 2003, DiFiore Builders Inc. provides quality work from the foundation to the roof of your home. With years of experience to rely on, we specialize in all aspects of building and remodeling — kitchens, bathrooms, new additions, basements, decks, roofing and siding, and more.</p>
+            <p>Being a small, local team, you can expect nothing less than personalized care and attention to detail. We’re proud of our longstanding reputation as your one-call solution here in the Tri-State Area. Get in touch anytime for a quote — we’re always happy to help.</p>
+          </div>
+
+          <figure class="about-image" aria-describedby="about-caption">
+            <picture>
+              <!-- the provided owner + right-hand man image -->
+              <source srcset="https://img1.wsimg.com/isteam/ip/111e2203-c8e6-4588-acfc-521f62348879/1caf07f0-8ccd-4239-a28b-6fbfef42a7dc.jpg/:/rs=w:1240,h:620,cg:true,m/cr=w:1240,h:620" media="(min-width: 600px)">
+              <img src="https://img1.wsimg.com/isteam/ip/111e2203-c8e6-4588-acfc-521f62348879/1caf07f0-8ccd-4239-a28b-6fbfef42a7dc.jpg/:/rs=w:1240,h:620,cg:true,m/cr=w:1240,h:620" alt="The owner of DiFiore Builders and his right-hand man" loading="lazy" width="1240" height="620">
+            </picture>
+            <figcaption id="about-caption" class="about-caption">Our leadership team — committed to personal service and quality craftsmanship.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pillars Banner -->
+    <section class="pillars" aria-label="Our Pillars">
+      <div class="pillars-inner">
+        <div class="pillar">
+          <div class="icon">🛡️</div>
+          <div>
+            <h4>Integrity</h4>
+            <p>Honest estimates, transparent communication, workmanship we stand behind.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="icon">💡</div>
+          <div>
+            <h4>Innovation</h4>
+            <p>Modern materials & smart detailing that elevate performance and style.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="icon">🏠</div>
+          <div>
+            <h4>Impact</h4>
+            <p>Spaces that improve daily life and add lasting value to your home.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Intro -->
+    <section id="services" class="services-intro">
+      <div class="container">
+        <h2>Our Services — Built on Experience Since 2003</h2>
+        <p>From roofs to renovations, additions to new builds — we’ve got you covered.</p>
+      </div>
+    </section>
+
+    <!-- SERVICE: Roofing & Siding -->
+    <section class="service-hero" aria-labelledby="svc-roofing">
+      <div class="bg" style="background-image:url('https://img1.wsimg.com/isteam/ip/111e2203-c8e6-4588-acfc-521f62348879/2-0002.jpg/:/rs=w:1280');"></div>
+      <div class="tint"></div>
+      <div class="content">
+        <div class="service-meta">
+          <span class="meta-pill">🏅 Since 2003</span>
+          <span class="meta-pill">🛡️ Licensed & Insured</span>
+        </div>
+        <h3 id="svc-roofing">Roofing &amp; Siding</h3>
+        <p class="lead">Protect your home with proven systems and clean, durable finishes.</p>
+        <ul class="service-bullets" aria-label="Roofing & Siding capabilities">
+          <li>Traditional Asphalt Dimensional Shingles</li>
+          <li>Standing Seam Metal & Flat Roofs</li>
+          <li>Rubber Membrane</li>
+          <li>Gutter Guard Systems</li>
+          <li>Downspouts & Aluminum</li>
+          <li>Vinyl, Hardie Board, Azek Trim — many styles</li>
+        </ul>
+        <div class="service-cta">
+          <a class="btn-primary" href="#calculator">Get Roofing/Siding Estimate</a>
+          <a class="btn-secondary" href="#contact">Talk to a Specialist</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE: Additions -->
+    <section class="service-hero" aria-labelledby="svc-additions">
+      <div class="bg" style="background-image:url('https://img1.wsimg.com/isteam/ip/111e2203-c8e6-4588-acfc-521f62348879/ca6183c2-7ef0-4157-95d2-7aa7ea2c3b4b/:/cr=t:12.54%25,l:0%25,w:100%25,h:74.92%25/rs=w:600,h:300,cg=true');"></div>
+      <div class="tint"></div>
+      <div class="content">
+        <div class="service-meta">
+          <span class="meta-pill">🏅 Since 2003</span>
+          <span class="meta-pill">🧱 Custom Framing & Finish</span>
+        </div>
+        <h3 id="svc-additions">Additions</h3>
+        <p class="lead">More space, done right — seamlessly integrated with your home.</p>
+        <ul class="service-bullets" aria-label="Additions capabilities">
+          <li>Second Floor Additions & Dormers</li>
+          <li>Master Bedrooms & Bathrooms</li>
+          <li>Family Rooms & Sun Rooms</li>
+          <li>In-Law Quarters</li>
+          <li>Finished Basements</li>
+          <li>Garages & More</li>
+        </ul>
+        <div class="service-cta">
+          <a class="btn-primary" href="#calculator">Get Additions Estimate</a>
+          <a class="btn-secondary" href="#contact">Discuss Your Plans</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE: Renovations (Kitchen/Bath/Basements) with rotating background -->
+    <section class="service-hero" aria-labelledby="svc-reno">
+      <div id="renoBg" class="bg"></div>
+      <div class="tint"></div>
+      <div class="content">
+        <div class="service-meta">
+          <span class="meta-pill">🏅 Since 2003</span>
+          <span class="meta-pill">🖼️ Design-Driven</span>
+        </div>
+        <h3 id="svc-reno">Renovations — Kitchens, Bathrooms, Basements</h3>
+        <p class="lead">Functional, beautiful spaces with thoughtful details and durable finishes.</p>
+        <ul class="service-bullets" aria-label="Renovations capabilities">
+          <li>Kitchens — cabinetry, counters, lighting, layout</li>
+          <li>Bathrooms — tile, showers, accessibility</li>
+          <li>Finished Basements — living, office, play</li>
+          <li>Windows, Siding, Roofing tie-ins</li>
+          <li>Fences, Decks, Patios</li>
+          <li>Permits & project management</li>
+        </ul>
+        <div class="service-cta">
+          <a class="btn-primary" href="#calculator">Get Renovation Estimate</a>
+          <a class="btn-secondary" href="#contact">See If We’re a Fit</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE: New Builds & General Construction -->
+    <section class="service-hero" aria-labelledby="svc-builds">
+      <div class="bg" style="background-image:url('https://img1.wsimg.com/isteam/ip/111e2203-c8e6-4588-acfc-521f62348879/1-0002.jpg/:/rs=w:1280');"></div>
+      <div class="tint"></div>
+      <div class="content">
+        <div class="service-meta">
+          <span class="meta-pill">🏅 Since 2003</span>
+          <span class="meta-pill">📐 Full-Service GC</span>
+        </div>
+        <h3 id="svc-builds">New Builds &amp; General Construction</h3>
+        <p class="lead">From ground-up to whole-home updates, we manage every detail.</p>
+        <ul class="service-bullets" aria-label="New Builds capabilities">
+          <li>Custom Homes & Major Renovations</li>
+          <li>Siding/Roofing/Windows packages</li>
+          <li>Fences, Decks, Patios & Hardscape</li>
+          <li>Structural & Framing</li>
+          <li>Energy-smart materials</li>
+          <li>Trusted trade partners</li>
+        </ul>
+        <div class="service-cta">
+          <a class="btn-primary" href="#calculator">Start Your Project</a>
+          <a class="btn-secondary" href="#contact">Contact Our Team</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calculator -->
+    <section id="calculator" class="calculator-section" aria-labelledby="calc-title">
+      <div class="container">
+        <div class="calculator-header fade-in">
+          <h2 id="calc-title" class="section-title">Get Your Project Estimate</h2>
+          <p class="section-subtitle">Honest pricing for quality work. No hidden fees, no surprises.</p>
+        </div>
+        <div class="calculator-container fade-in">
+          <div id="hb-calculator"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact" class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>DiFiore Builders</h3>
+          <p>Building dreams with faith and excellence since 2003.</p>
+          <div class="footer-badges">
+            <span class="footer-pill">🏆 Since 2003</span>
+            <span class="footer-pill">🔧 Workmanship Warranty</span>
+            <span class="footer-pill">🛡️ Licensed &amp; Insured</span>
+          </div>
+          <p style="margin-top:.6rem"><strong>Pennsylvania Office:</strong><br/>Serving Central PA</p>
+          <p><strong>Charlotte Metro:</strong><br/>Serving the greater Charlotte area</p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Our Services</h3>
+          <ul>
+            <li><a href="#services">Roofing & Siding</a></li>
+            <li><a href="#services">Additions</a></li>
+            <li><a href="#services">Kitchens & Bathrooms</a></li>
+            <li><a href="#services">New Builds</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>📞 Call for immediate assistance</p>
+          <p>📧 info@difiorebuilders.com</p>
+          <p>📍 Serving PA &amp; Charlotte Metro</p>
+          <p>⏰ Mon–Sat: 7AM–6PM</p>
+          <p>🙏 Christian-owned family business</p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Why Choose Us</h3>
+          <ul>
+            <li>20+ years of experience</li>
+            <li>Family-owned &amp; operated</li>
+            <li>Christian values &amp; integrity</li>
+            <li>Licensed &amp; fully insured</li>
+            <li>Workmanship warranty</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 DiFiore Builders. All rights reserved. | Established 2003 • Faith • Family • Quality</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Calculator Styles (your original theme, retained) -->
+  <style>
+    :root{
+      --bg:#f8fafc; --panel:#ffffff; --text:#0f172a; --muted:#64748b; --primary:#1a365d; --primary2:#2d5a87;
+      --ring:#7c9cbd; --border:#e5e7eb; --green:#059669; --orange:#ea580c; --purple:#7c3aed;
+    }
+    #hb-calculator *{box-sizing:border-box}
+    #hb-calculator{font-family:Georgia, serif;color:var(--text);background:#fff;padding:0}
+    .hb-wrap{max-width:960px;margin:0 auto}
+    .hb-title{font-weight:800;font-size:clamp(28px,4vw,40px);margin:0 0 8px;color:var(--primary)}
+    .hb-sub{color:var(--muted);margin:0 0 24px}
+    .hb-progress{margin-bottom:20px}
+    .hb-bar{height:10px;background:#fff;border-radius:999px;overflow:hidden;box-shadow:inset 0 0 0 1px #e2e8f0}
+    .hb-fill{height:100%;background:linear-gradient(90deg,var(--primary),var(--primary2));width:0%;transition:width .3s ease}
+    .hb-steps{display:flex;justify-content:space-between;margin-top:8px;font-size:12px;color:var(--muted)}
+    .hb-steps span.active{color:var(--primary);font-weight:600}
+    .hb-panel{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:24px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+    .hb-section-title{font-size:20px;font-weight:700;margin:0 0 8px;color:var(--primary)}
+    .hb-section-sub{color:var(--muted);margin:0 0 16px}
+    .grid{display:grid;gap:16px}
+    .g-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .g-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    @media (max-width:820px){.g-2,.g-3{grid-template-columns:1fr}}
+    .field{display:flex;flex-direction:column;gap:6px}
+    .label{font-size:14px;font-weight:600}
+    .hint{color:var(--muted);font-size:12px}
+    .input,.select,.textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid #cbd5e1;background:#fff;outline:none}
+    .input:focus,.select:focus,.textarea:focus{border-color:var(--primary);box-shadow:0 0 0 3px var(--ring)}
+    .muted{color:#475569}
+    .calc-read{background:#f8fafc;border:1px solid #e2e8f0;color:#334155;font-weight:600}
+    .pill{padding:12px;border-radius:12px;border:2px solid #e5e7eb;text-align:left;cursor:pointer;background:#fff;transition:.2s ease}
+    .pill:hover{box-shadow:0 6px 20px rgba(2,6,23,.06)}
+    .pill.active{border-color:var(--primary);background:#f0f8ff;box-shadow:0 8px 24px rgba(26,54,93,.1)}
+    .pill .icon{font-size:28px;margin-bottom:8px}
+    .est-box{background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px;text-align:center}
+    .est-box.emph{border-width:2px;border-color:var(--primary)}
+    .t-con{color:#16a34a;font-weight:800}
+    .t-mid{color:var(--primary);font-weight:900;font-size:22px}
+    .t-prem{color:var(--orange);font-weight:800}
+    .tag{display:inline-block;padding:4px 8px;border-radius:999px;background:#ecfeff;border:1px solid #a5f3fc;color:#0369a1;font-size:12px}
+    .row{display:flex;gap:12px;justify-content:space-between;font-size:14px;color:#475569}
+    .btns{display:flex;justify-content:space-between;gap:12px;margin-top:18px}
+    .btn{border-radius:12px;padding:12px 18px;border:1px solid #cbd5e1;background:#fff;cursor:pointer;transition:.2s ease}
+    .btn:hover{background:#f8fafc}
+    .btn.primary{background:linear-gradient(90deg,var(--primary),var(--primary2));color:#fff;border:none;box-shadow:0 10px 24px rgba(26,54,93,.2)}
+    .btn.primary:hover{filter:brightness(.95)}
+    .btn:disabled{opacity:.5;cursor:not-allowed}
+    .hidden{display:none !important}
+    .ok{color:#16a34a}
+    .warn{color:#b45309}
+  </style>
+
+  <!-- Scripts: nav, fade-ins, services bg rotation, calculator -->
+  <script>
+    // Fade-in on scroll
+    const io = new IntersectionObserver((entries)=>entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); }),{threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    window.addEventListener('DOMContentLoaded', ()=>{
+      document.querySelectorAll('.fade-in').forEach(el=>io.observe(el));
+
+      // Smooth anchor scroll (account for sticky header)
+      const headerOffset = 86;
+      document.querySelectorAll('a[href^="#"]').forEach(link=>{
+        link.addEventListener('click', (e)=>{
+          const id = link.getAttribute('href');
+          if(!id || id === '#') return;
+          const target = document.querySelector(id);
+          if(!target) return;
+          e.preventDefault();
+          const y = target.getBoundingClientRect().top + window.scrollY - headerOffset;
+          window.scrollTo({top:y, behavior:'smooth'});
+        });
+      });
+
+      // Header elevation on scroll
+      const hdr = document.querySelector('.header');
+      const onScroll = ()=>{ hdr.style.boxShadow = window.scrollY>60 ? '0 8px 24px rgba(0,0,0,.12)' : 'none'; };
+      onScroll(); window.addEventListener('scroll', onScroll);
+
+      // Mobile menu
+      const toggle = document.getElementById('navToggle');
+      const menu = document.getElementById('mobileMenu');
+      const setOpen = (open)=>{ menu.classList.toggle('open', open); toggle.setAttribute('aria-expanded', open?'true':'false'); document.body.style.overflow = open ? 'hidden' : ''; };
+      toggle.addEventListener('click', ()=> setOpen(!menu.classList.contains('open')));
+      menu.querySelectorAll('[data-nav-close]').forEach(a=> a.addEventListener('click', ()=> setOpen(false)));
+      document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') setOpen(false); });
+
+      // Renovations hero rotating backgrounds (your 3 kitchen images)
+      const reno = document.getElementById('renoBg');
+      const renoImages = [
+        "https://img1.wsimg.com/isteam/ip/111e2203-c8e6-4588-acfc-521f62348879/09a8dd7e-59a2-414a-b97a-f39054128a03/:/rs=w:1280",
+        "https://img1.wsimg.com/isteam/ip/111e2203-c8e6-4588-acfc-521f62348879/9308c6d3-7bdc-497c-a3d6-1d315f120ca5/:/rs=w:1280",
+        "https://img1.wsimg.com/isteam/ip/111e2203-c8e6-4588-acfc-521f62348879/91bf5636-6fb9-4d46-a0b3-ebe0db026595/:/rs=w:1280"
+      ];
+      let renoIdx = 0;
+      function setReno(i){
+        reno.style.transition = 'opacity .6s ease';
+        reno.style.opacity = '0';
+        setTimeout(()=>{
+          reno.style.backgroundImage = `url('${renoImages[i]}')`;
+          reno.style.opacity = '1';
+        }, 300);
+      }
+      // Preload images to avoid flash
+      renoImages.forEach(src => { const img = new Image(); img.src = src; });
+      setReno(renoIdx);
+      setInterval(()=>{ renoIdx = (renoIdx+1)%renoImages.length; setReno(renoIdx); }, 5000);
+    });
+  </script>
+
+  <!-- Calculator (original logic preserved) -->
+  <script>
+  (function(){
+    const DEFAULTS = {
+      laborMultiplier: 1.0,
+      materialMultiplier: 1.0,
+      roofingBasePerSquare: 525,
+      roofingTearOffPerSquare: 95,
+      roofingComplexity: { simple: 1.0, complex: 1.25, very_complex: 1.45 },
+      roofingMaterialFactor: {
+        asphalt_3tab: 0.9,
+        architectural: 1.0,
+        metal_standing: 2.2,
+        cedar: 1.8,
+        slate_synthetic: 2.6
+      },
+      deckCostPerSqft: { standard_pt: 55, popular_comp: 85, premium_comp: 110 },
+      deckStairsAdder: 1200,
+      deckRailingLFPerFt: { none: 0, basic: 25, metal: 60 },
+      bathBase: {
+        powder: { standard: 8000, popular: 12000, premium: 18000 },
+        guest_full: { standard: 18000, popular: 28000, premium: 40000 },
+        primary: { standard: 35000, popular: 55000, premium: 80000 }
+      },
+      bathLayoutFactor: { none: 1.0, minor: 1.15, major: 1.35 },
+      bathShowerAdder: { tub_shower: 0, walk_in_tile: 7000, curbless_tile: 12000 },
+      vanityPerFoot: { standard: 350, popular: 600, premium: 900 }
+    };
+
+    const state = {
+      step: 0,
+      project: "",
+      address: { address: "", propertyType: "single_family", homeAge: "10-30years", stories: "2" },
+      details: {},
+      contact: {}
+    };
+
+    const $root = document.getElementById("hb-calculator");
+    const currency = n => new Intl.NumberFormat("en-US",{style:"currency",currency:"USD",maximumFractionDigits:0}).format(Math.round(n||0));
+    const clamp = (n,min,max)=>Math.max(min,Math.min(max,n));
+    const progressPct = () => ((state.step + 1) / 5) * 100;
+    const isValidAddress = () => state.address.address && state.address.address.trim().length > 6;
+    const isValidProject = () => !!state.project;
+    const isValidContact = () => { const c = state.contact; return c.firstName && c.lastName && c.email && /.+@.+\..+/.test(c.email); };
+
+    function estimateRoofing(v){
+      const squares = Math.max(1, Math.round(((Number(v.roofSqft)||2200)/100)*10)/10);
+      const base = DEFAULTS.roofingBasePerSquare*DEFAULTS.laborMultiplier*DEFAULTS.materialMultiplier;
+      const material = v.material || "architectural";
+      const complexity = v.complexity || "complex";
+      const mf = DEFAULTS.roofingMaterialFactor[material] || 1;
+      const cf = DEFAULTS.roofingComplexity[complexity] || 1.25;
+      const tear = (v.tearOff ?? true) ? DEFAULTS.roofingTearOffPerSquare : 0;
+      const perSquare = base*mf*cf + tear;
+      const mid = perSquare * squares;
+      return { low: mid*0.92, mid, high: mid*1.08, perSquare, squares };
+    }
+    function estimateDeck(v){
+      const sqft = Number(v.deckSqft)||300;
+      const mat = v.material || "popular_comp";
+      const deckCost = (DEFAULTS.deckCostPerSqft[mat]||85)*sqft*DEFAULTS.laborMultiplier*DEFAULTS.materialMultiplier;
+      const stairsCost = (v.stairs ?? true) ? DEFAULTS.deckStairsAdder : 0;
+      const rType = v.railing || "basic";
+      const railingCost = (DEFAULTS.deckRailingLFPerFt[rType]||0) * (v.railingFeet||40);
+      const total = deckCost + stairsCost + railingCost;
+      return { low: total*0.9, mid: total, high: total*1.1, breakdown:{deck:deckCost, stairs:stairsCost, railing:railingCost} };
+    }
+    function estimateBath(v){
+      const type = v.bathType || "guest_full";
+      const finish = v.finishLevel || "popular";
+      const base = (DEFAULTS.bathBase[type]||{})[finish] || 28000;
+      const lf = DEFAULTS.bathLayoutFactor[v.layoutChange || "minor"] || 1.15;
+      const shower = DEFAULTS.bathShowerAdder[v.showerType || "tub_shower"] || 0;
+      const vanity = (DEFAULTS.vanityPerFoot[finish]||0) * (Number(v.vanityLength)||5);
+      const total = base*lf*DEFAULTS.laborMultiplier*DEFAULTS.materialMultiplier + shower + vanity;
+      return { low: total*0.85, mid: total, high: total*1.25, breakdown:{base:base*lf, shower, vanity} };
+    }
+    function currentEstimate(){
+      if(state.project==="roofing") return estimateRoofing(state.details);
+      if(state.project==="deck") return estimateDeck(state.details);
+      if(state.project==="bathroom") return estimateBath(state.details);
+      return null;
+    }
+
+    function header(){
+      return `
+        <div class="hb-wrap">
+          <h1 class="hb-title">Project Cost Calculator</h1>
+          <p class="hb-sub">Get accurate estimates for your home improvement project</p>
+          <div class="hb-progress">
+            <div class="hb-bar"><div class="hb-fill" style="width:${progressPct()}%"></div></div>
+            <div class="hb-steps">
+              <span class="${state.step>=0?'active':''}">Address</span>
+              <span class="${state.step>=1?'active':''}">Project</span>
+              <span class="${state.step>=2?'active':''}">Details</span>
+              <span class="${state.step>=3?'active':''}">Contact</span>
+              <span class="${state.step>=4?'active':''}">Review</span>
+            </div>
+          </div>
+          <div class="hb-panel">${sectionContent()}</div>
+          <div class="btns">
+            <button class="btn" id="hb-prev" ${state.step===0?'disabled':''}>← Previous</button>
+            <button class="btn primary" id="hb-next">${state.step===4?'Submit Request':'Next →'}</button>
+          </div>
+        </div>
+      `;
+    }
+    const projectDefs = [
+      {id:"roofing", name:"Roofing Replacement", icon:"🏠", desc:"Complete roof replacement with quality materials"},
+      {id:"deck", name:"Deck Construction", icon:"🏗️", desc:"Custom deck building and installation"},
+      {id:"bathroom", name:"Bathroom Remodel", icon:"🚿", desc:"Complete bathroom renovation"}
+    ];
+    function titleForStep(){
+      if(state.step===0) return "Project Location";
+      if(state.step===1) return "What project are you planning?";
+      if(state.step===2) return (projectDefs.find(p=>p.id===state.project)?.name || "Project") + " Details";
+      if(state.step===3) return "Contact Information";
+      if(state.step===4) return "Review & Submit";
+      return "Project Calculator";
+    }
+    function sectionContent(){ return `<div><div class="hb-section-title">${titleForStep()}</div>${stepBody()}</div>`; }
+    function stepBody(){
+      switch(state.step){
+        case 0: return addressStep();
+        case 1: return projectStep();
+        case 2: return detailsStep();
+        case 3: return contactStep();
+        case 4: return reviewStep();
+        default: return '';
+      }
+    }
+    function addressStep(){
+      const v = state.address;
+      return `
+        <div class="hb-section-sub">Enter the address where your project will take place</div>
+        <div class="grid g-1">
+          <div class="field">
+            <label class="label">Property Address *</label>
+            <input class="input" id="addr-address" placeholder="123 Main Street, City, ST 12345" value="${escapeHtml(v.address||'')}">
+            <div class="hint">${isValidAddress()?'<span class="ok">Looks good ✔️</span>':'Start typing your address'}</div>
+          </div>
+        </div>
+        <div class="grid g-3" style="margin-top:12px">
+          <div class="field">
+            <label class="label">Property Type</label>
+            <select class="select" id="addr-type">
+              ${options([["single_family","Single Family Home"],["townhouse","Townhouse"],["condo","Condominium"],["duplex","Duplex"],["commercial","Commercial Property"]], v.propertyType||"single_family")}
+            </select>
+          </div>
+          <div class="field">
+            <label class="label">Home Age (approx.)</label>
+            <select class="select" id="addr-age">
+              ${options([["new","Less than 5 years"],["5-10years","5-10 years"],["10-30years","10-30 years"],["30-50years","30-50 years"],["50years+","50+ years"]], v.homeAge||"10-30years")}
+            </select>
+          </div>
+          <div class="field">
+            <label class="label">Stories</label>
+            <select class="select" id="addr-stories">
+              ${options([["1","1 Story"],["2","2 Stories"],["3","3+ Stories"]], v.stories||"2")}
+            </select>
+          </div>
+        </div>
+      `;
+    }
+    function projectStep(){
+      return `
+        <p class="hb-section-sub">Choose the type of project you're planning:</p>
+        <div class="grid g-3">
+          ${projectDefs.map(p => `
+            <button class="pill ${state.project===p.id?'active':''}" data-project="${p.id}">
+              <div class="icon">${p.icon}</div>
+              <div style="font-weight:700">${p.name}</div>
+              <div class="muted" style="font-size:14px">${p.desc}</div>
+            </button>
+          `).join('')}
+        </div>
+      `;
+    }
+    function detailsStep(){
+      if(state.project==="roofing") return roofingDetails();
+      if(state.project==="deck") return deckDetails();
+      if(state.project==="bathroom") return bathDetails();
+      return `<div class="muted">Please select a project type first.</div>`;
+    }
+    function roofingDetails(){
+      const v = state.details;
+      const est = estimateRoofing(v);
+      return `
+        <div class="grid g-2">
+          <div class="field">
+            <label class="label">Roof area (sq.ft)</label>
+            <input class="input" id="roof-sqft" type="number" min="300" max="20000" step="50" value="${Number(v.roofSqft??2200)}">
+            <div class="hint">Typical home: 1,800–3,000 sq.ft</div>
+          </div>
+          <div class="field">
+            <label class="label">Tear-off existing roof?</label>
+            <select class="select" id="roof-tear">
+              ${options([["yes","Yes — remove & dispose (Most common)"],["no","No — overlay (if code allows)"]], (v.tearOff??true)?"yes":"no")}
+            </select>
+          </div>
+        </div>
+        <div class="grid g-3" style="margin-top:12px">
+          <div class="field">
+            <label class="label">Material</label>
+            <select class="select" id="roof-mat">
+              ${options([
+                ["asphalt_3tab","Asphalt 3-Tab — Standard"],
+                ["architectural","Architectural Asphalt — Most Popular"],
+                ["metal_standing","Standing-Seam Metal — Premium"],
+                ["cedar","Cedar Shake — Premium"],
+                ["slate_synthetic","Slate (Synthetic) — Luxury"]
+              ], v.material||"architectural")}
+            </select>
+          </div>
+          <div class="field">
+            <label class="label">Roof complexity</label>
+            <select class="select" id="roof-cx">
+              ${options([
+                ["simple","Simple (low pitch, few planes)"],
+                ["complex","Complex — Most Popular"],
+                ["very_complex","Very Complex (steep/many planes)"]
+              ], v.complexity||"complex")}
+            </select>
+          </div>
+          <div class="field">
+            <label class="label">Calculated</label>
+            <input class="input calc-read" disabled value="${est.squares} squares @ ${currency(est.perSquare)}/sq.">
+          </div>
+        </div>
+        ${estimateBlock(est, "blue")}
+      `;
+    }
+    function deckDetails(){
+      const v = state.details;
+      const est = estimateDeck(v);
+      return `
+        <div class="grid g-2">
+          <div class="field">
+            <label class="label">Deck size (sq.ft)</label>
+            <input class="input" id="deck-sqft" type="number" min="100" max="2000" step="25" value="${Number(v.deckSqft??300)}">
+            <div class="hint">Typical deck: 200–500 sq.ft</div>
+          </div>
+          <div class="field">
+            <label class="label">Railing length (linear ft)</label>
+            <input class="input" id="deck-rail-ft" type="number" min="0" max="200" step="5" value="${Number(v.railingFeet??40)}">
+            <div class="hint">Perimeter needing railings</div>
+          </div>
+        </div>
+        <div class="grid g-3" style="margin-top:12px">
+          <div class="field">
+            <label class="label">Decking Material</label>
+            <select class="select" id="deck-mat">
+              ${options([
+                ["standard_pt","Pressure Treated — Standard"],
+                ["popular_comp","Composite Boards — Most Popular"],
+                ["premium_comp","Premium Composite — Luxury"]
+              ], v.material||"popular_comp")}
+            </select>
+          </div>
+          <div class="field">
+            <label class="label">Stairs included?</label>
+            <select class="select" id="deck-stairs">
+              ${options([["yes","Yes — Standard stairs"],["no","No stairs needed"]], (v.stairs??true)?"yes":"no")}
+            </select>
+          </div>
+          <div class="field">
+            <label class="label">Railing type</label>
+            <select class="select" id="deck-rail-type">
+              ${options([["none","No railings"],["basic","Basic wood — Most Popular"],["metal","Metal/Cable — Premium"]], v.railing||"basic")}
+            </select>
+          </div>
+        </div>
+        ${estimateBlock(est, "green", est.breakdown)}
+      `;
+    }
+    function bathDetails(){
+      const v = state.details;
+      const est = estimateBath(v);
+      return `
+        <div class="grid g-2">
+          <div class="field">
+            <label class="label">Bathroom type</label>
+            <select class="select" id="bath-type">
+              ${options([["powder","Powder room (½ bath)"],["guest_full","Guest full bath — Most Popular"],["primary","Primary suite bathroom"]], v.bathType||"guest_full")}
+            </select>
+          </div>
+          <div class="field">
+            <label class="label">Finish level</label>
+            <select class="select" id="bath-finish">
+              ${options([["standard","Standard finishes"],["popular","Popular finishes — Most Popular"],["premium","Premium finishes"]], v.finishLevel||"popular")}
+            </select>
+          </div>
+        </div>
+        <div class="grid g-3" style="margin-top:12px">
+          <div class="field">
+            <label class="label">Layout changes</label>
+            <select class="select" id="bath-layout">
+              ${options([["none","Keep existing layout"],["minor","Minor changes — Most Popular"],["major","Major layout changes"]], v.layoutChange||"minor")}
+            </select>
+          </div>
+          <div class="field">
+            <label class="label">Shower type</label>
+            <select class="select" id="bath-shower">
+              ${options([["tub_shower","Standard tub/shower"],["walk_in_tile","Walk-in tile shower"],["curbless_tile","Curbless tile shower — Premium"]], v.showerType||"tub_shower")}
+            </select>
+          </div>
+          <div class="field">
+            <label class="label">Vanity length (feet)</label>
+            <input class="input" id="bath-vanity" type="number" min="2" max="12" step="1" value="${Number(v.vanityLength??5)}">
+          </div>
+        </div>
+        ${estimateBlock(est, "purple", est.breakdown)}
+      `;
+    }
+    function reviewStep(){
+      const project = projectDefs.find(p=>p.id===state.project);
+      const est = currentEstimate();
+      return `
+        <div class="grid g-1" style="gap:18px">
+          <div style="background:linear-gradient(90deg,#f8fafc,#eef2ff);border:1px solid #e5e7eb;border-radius:12px;padding:16px">
+            <div style="font-weight:700;margin-bottom:10px;color:var(--primary);">Project Summary</div>
+            <div class="grid g-2" style="font-size:14px;color:#334155">
+              <div><strong>Address:</strong> ${escapeHtml(state.address.address||"—")}</div>
+              <div><strong>Project:</strong> ${project?project.name:"—"}</div>
+              <div><strong>Contact:</strong> ${(state.contact.firstName||"")} ${(state.contact.lastName||"")}</div>
+              <div><strong>Email:</strong> ${state.contact.email||"—"}</div>
+              <div><strong>Phone:</strong> ${state.contact.phone||"Not provided"}</div>
+              <div><strong>Timeline:</strong> ${state.contact.timeline||"—"}</div>
+            </div>
+          </div>
+          ${est ? `
+            <div style="background:#f0f9ff;border:1px solid #bae6fd;border-radius:12px;padding:16px">
+              <div class="row"><span class="tag">Estimated Cost Range</span></div>
+              <div class="grid g-3" style="margin-top:12px">
+                <div class="est-box"><div class="muted">Conservative</div><div class="t-con">${currency(est.low)}</div></div>
+                <div class="est-box emph"><div style="color:var(--primary);font-weight:700">Most Likely</div><div class="t-mid">${currency(est.mid)}</div></div>
+                <div class="est-box"><div class="muted">Premium</div><div class="t-prem">${currency(est.high)}</div></div>
+              </div>
+            </div>
+            <div style="background:linear-gradient(135deg,#1a365d,#2d5a87);color:#fff;border-radius:12px;padding:16px;text-align:center">
+              <div style="font-size:1.05rem;margin-bottom:6px;">✨ <strong>DiFiore Promise</strong> ✨</div>
+              <p style="margin:0;opacity:.95;font-size:.95rem;">Every estimate includes our commitment to faith-based service, quality materials, and workmanship warranty</p>
+              <div style="margin-top:.5rem;display:inline-flex;gap:.5rem;flex-wrap:wrap">
+                <span class="tag">Since 2003</span><span class="tag">Licensed & Insured</span>
+              </div>
+            </div>
+          `:''}
+          <div style="text-align:center;margin-top:6px">
+            <button class="btn primary" id="hb-submit" style="font-size:1.05rem;padding:.9rem 1.4rem;">Submit Project Request 🙏</button>
+          </div>
+        </div>
+      `;
+    }
+    function estimateBlock(est,color,breakdown){
+      const bg = color==="green" ? "linear-gradient(90deg,#ecfdf5,#d1fae5)" : color==="purple" ? "linear-gradient(90deg,#faf5ff,#fce7f3)" : "linear-gradient(90deg,#eff6ff,#e0e7ff)";
+      const border = color==="green" ? "#bbf7d0" : color==="purple" ? "#e9d5ff" : "#bfdbfe";
+      return `
+        <div style="background:${bg};border:1px solid ${border};border-radius:12px;padding:16px;margin-top:12px">
+          <div class="grid g-3" style="text-align:center;margin-bottom:8px">
+            <div class="est-box"><div class="muted">Conservative</div><div class="t-con">${currency(est.low)}</div></div>
+            <div class="est-box emph"><div style="color:var(--primary);font-weight:700">Most Likely</div><div class="t-mid">${currency(est.mid)}</div></div>
+            <div class="est-box"><div class="muted">Premium</div><div class="t-prem">${currency(est.high)}</div></div>
+          </div>
+          ${breakdown ? `
+            <div class="grid g-3" style="font-size:14px;color:#475569">
+              ${breakdown.deck!==undefined?`<div>Decking: <strong>${currency(breakdown.deck)}</strong></div>`:''}
+              ${breakdown.stairs!==undefined?`<div>Stairs: <strong>${currency(breakdown.stairs)}</strong></div>`:''}
+              ${breakdown.railing!==undefined?`<div>Railing: <strong>${currency(breakdown.railing)}</strong></div>`:''}
+              ${breakdown.base!==undefined?`<div>Base: <strong>${currency(breakdown.base)}</strong></div>`:''}
+              ${breakdown.shower!==undefined?`<div>Shower: <strong>${currency(breakdown.shower)}</strong></div>`:''}
+              ${breakdown.vanity!==undefined?`<div>Vanity: <strong>${currency(breakdown.vanity)}</strong></div>`:''}
+            </div>`:''}
+        </div>
+      `;
+    }
+    const escMap={'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}; const escapeHtml=s=>String(s).replace(/[&<>"']/g,ch=>escMap[ch]);
+    function options(arr,value){return arr.map(([v,l])=>`<option value="${v}" ${value===v?'selected':''}>${l}</option>`).join('')}
+
+    function render(){
+      $root.innerHTML = header();
+      $root.querySelector("#hb-prev").addEventListener("click", ()=>{ state.step = Math.max(0, state.step-1); render(); });
+      $root.querySelector("#hb-next").addEventListener("click", ()=>{
+        if(state.step===0 && !isValidAddress()){ alert("Please enter a valid address."); return; }
+        if(state.step===1 && !isValidProject()){ alert("Please select a project type first."); return; }
+        if(state.step===3 && !isValidContact()){ alert("Please fill in required contact information."); return; }
+        if(state.step===4){
+          const method = state.contact.contactPreference || "email";
+          const project = projectDefs.find(p=>p.id===state.project);
+          const est = currentEstimate();
+          alert(`🙏 Thank you ${state.contact.firstName||""}! Your ${project?.name||"project"} estimate for ${state.address.address||"your property"} has been submitted.\n\nEstimated range: ${est ? currency(est.low) + ' - ' + currency(est.high) : 'TBD'}\n\nWe'll contact you within 24 hours via ${method} to discuss your project. God bless!`);
+          return;
+        }
+        state.step = Math.min(4, state.step+1); render();
+      });
+
+      if(state.step===0){
+        const a=state.address;
+        bind("#addr-address","input",e=>{a.address=e.target.value;});
+        bind("#addr-type","change",e=>{a.propertyType=e.target.value;});
+        bind("#addr-age","change",e=>{a.homeAge=e.target.value;});
+        bind("#addr-stories","change",e=>{a.stories=e.target.value;});
+      }
+      if(state.step===1){
+        $root.querySelectorAll("[data-project]").forEach(btn=>{
+          btn.addEventListener("click", ()=>{ state.project = btn.getAttribute("data-project"); state.details = {}; render(); });
+        });
+      }
+      if(state.step===2){
+        if(state.project==="roofing"){
+          const d=state.details; const bindRoof=()=>{ d.roofSqft=clamp(Number(val("#roof-sqft")),300,20000); d.tearOff=val("#roof-tear")==="yes"; d.material=val("#roof-mat"); d.complexity=val("#roof-cx"); render(); };
+          ["#roof-sqft","#roof-tear","#roof-mat","#roof-cx"].forEach(sel=>{ bind(sel,"input",bindRoof); bind(sel,"change",bindRoof); });
+        }
+        if(state.project==="deck"){
+          const d=state.details; const bindDeck=()=>{ d.deckSqft=clamp(Number(val("#deck-sqft")),100,2000); d.railingFeet=clamp(Number(val("#deck-rail-ft")),0,200); d.material=val("#deck-mat"); d.stairs=val("#deck-stairs")==="yes"; d.railing=val("#deck-rail-type"); render(); };
+          ["#deck-sqft","#deck-rail-ft","#deck-mat","#deck-stairs","#deck-rail-type"].forEach(sel=>{ bind(sel,"input",bindDeck); bind(sel,"change",bindDeck); });
+        }
+        if(state.project==="bathroom"){
+          const d=state.details; const bindBath=()=>{ d.bathType=val("#bath-type"); d.finishLevel=val("#bath-finish"); d.layoutChange=val("#bath-layout"); d.showerType=val("#bath-shower"); d.vanityLength=clamp(Number(val("#bath-vanity")),2,12); render(); };
+          ["#bath-type","#bath-finish","#bath-layout","#bath-shower","#bath-vanity"].forEach(sel=>{ bind(sel,"input",bindBath); bind(sel,"change",bindBath); });
+        }
+      }
+      if(state.step===3){
+        const map={"#c-first":"firstName","#c-last":"lastName","#c-email":"email","#c-phone":"phone","#c-pref":"contactPreference","#c-best":"bestTime","#c-time":"timeline","#c-notes":"notes"};
+        Object.entries(map).forEach(([sel,key])=>{ bind(sel,"input",e=>state.contact[key]=e.target.value); bind(sel,"change",e=>state.contact[key]=e.target.value); });
+      }
+      if(state.step===4){
+        const btn=$root.querySelector("#hb-submit");
+        if(btn){ btn.addEventListener("click", ()=>{ const method=state.contact.contactPreference || "email"; const project=projectDefs.find(p=>p.id===state.project); const est=currentEstimate(); alert(`🙏 Thank you ${state.contact.firstName||""}! Your ${project?.name||"project"} estimate for ${state.address.address||"your property"} has been submitted.\n\nEstimated range: ${est ? currency(est.low) + ' - ' + currency(est.high) : 'TBD'}\n\nWe'll contact you within 24 hours via ${method} to discuss your project. God bless!`); }); }
+      }
+    }
+    function contactStep(){
+      const c = state.contact;
+      return `
+        <div class="hb-section-sub">Let's connect! We'd love to discuss your project and provide a detailed estimate.</div>
+        <div class="grid g-2">
+          <div class="field">
+            <label class="label">First Name *</label>
+            <input class="input" id="c-first" value="${escapeHtml(c.firstName||'')}" placeholder="John">
+          </div>
+          <div class="field">
+            <label class="label">Last Name *</label>
+            <input class="input" id="c-last" value="${escapeHtml(c.lastName||'')}" placeholder="Smith">
+          </div>
+        </div>
+        <div class="grid g-2" style="margin-top:12px">
+          <div class="field">
+            <label class="label">Email *</label>
+            <input class="input" id="c-email" value="${escapeHtml(c.email||'')}" placeholder="john@email.com">
+          </div>
+          <div class="field">
+            <label class="label">Phone</label>
+            <input class="input" id="c-phone" value="${escapeHtml(c.phone||'')}" placeholder="(555) 123-4567">
+          </div>
+        </div>
+        <div class="field" style="margin-top:12px">
+          <label class="label">Preferred contact method</label>
+          <select class="select" id="c-pref">
+            ${options([["email","Email — Most Popular"],["phone","Phone call"],["text","Text message"],["either","Either phone or email"]], c.contactPreference||"email")}
+          </select>
+        </div>
+        <div class="grid g-2" style="margin-top:12px">
+          <div class="field">
+            <label class="label">Best time to contact</label>
+            <select class="select" id="c-best">
+              ${options([["morning","Morning (8am-12pm)"],["afternoon","Afternoon (12pm-5pm)"],["evening","Evening (5pm-8pm)"],["anytime","Anytime — Most Popular"]], c.bestTime||"anytime")}
+            </select>
+          </div>
+          <div class="field">
+            <label class="label">Timeline</label>
+            <select class="select" id="c-time">
+              ${options([["asap","ASAP (within 1 month)"],["1-3months","1-3 months"],["3-6months","3-6 months — Most Popular"],["6months+","6+ months (planning ahead)"]], c.timeline||"3-6months")}
+            </select>
+          </div>
+        </div>
+        <div class="field" style="margin-top:12px">
+          <label class="label">Notes (optional)</label>
+          <textarea class="textarea" id="c-notes" rows="3" placeholder="Tell us about your vision, any special requirements, or questions you have...">${escapeHtml(c.notes||'')}</textarea>
+        </div>
+        <div style="background:#f0f9ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px;margin-top:12px;text-align:center;color:var(--primary)">
+          <small>🤝 <strong>Our Promise:</strong> We'll contact you within 24 hours with a detailed estimate and answer any questions you have.</small>
+        </div>
+      `;
+    }
+    function bind(sel,evt,fn){ const el=document.querySelector(sel); if(el) el.addEventListener(evt,fn); }
+    function val(sel){ const el=document.querySelector(sel); return el ? el.value : ''; }
+    render();
+  })();
+  </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>DiFiore Builders — Faith, Family, Quality Craftsmanship</title>
+
+  <style>
+    :root{
+      --primary:#1a365d;
+      --secondary:#2d5a87;
+      --accent:#c7962c;
+      --accent-700:#b8862a;
+      --accent-light:#f1e2b8;
+      --text-dark:#1a202c;
+      --text-light:#4a5568;
+      --bg-light:#f7fafc;
+      --white:#ffffff;
+      --shadow:rgba(0,0,0,.1);
+      --shadow-strong:rgba(0,0,0,.2);
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{font-family:Georgia, serif; color:var(--text-dark); line-height:1.6; background:#fff; overflow-x:hidden}
+
+    /* Accessibility */
+    .skip-link{position:absolute;top:-40px;left:0;background:#000;color:#fff;padding:.5rem .75rem;z-index:2000;border-radius:0 0 .4rem .4rem}
+    .skip-link:focus{top:0}
+
+    /* Topbar */
+    .topbar{background:#0f2746;color:#e6edf7;font-size:.9rem}
+    .topbar .topbar-inner{max-width:1200px;margin:0 auto;padding:.4rem 1rem;display:flex;align-items:center;justify-content:space-between;gap:.75rem;flex-wrap:wrap}
+    .since-pill{display:inline-flex;align-items:center;gap:.4rem;background:rgba(199,150,44,.15);color:#ffe9b1;border:1px solid rgba(199,150,44,.35);padding:.25rem .6rem;border-radius:999px;font-weight:700}
+
+    /* Header */
+    .header{position:sticky;top:0;width:100%;background:rgba(26,54,93,.95);backdrop-filter:blur(10px);z-index:1000;transition:box-shadow .3s ease}
+    .nav{max-width:1200px;margin:0 auto;padding:.9rem 1rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .brand{display:flex;align-items:center;gap:.75rem;text-decoration:none;color:#fff}
+    .logo-mark{width:36px;height:36px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),#e8c468);color:#1a1a1a;border-radius:8px;font-weight:900;box-shadow:0 6px 18px rgba(199,150,44,.35)}
+    .logo-text{font-size:1.35rem;font-weight:800}
+    .nav-links{list-style:none;display:flex;gap:1.5rem}
+    .nav-links a{color:#fff;text-decoration:none;font-weight:600}
+    .nav-links a:hover{color:var(--accent)}
+    .cta-button{background:var(--accent);color:#fff;padding:.65rem 1rem;border:none;border-radius:8px;font-weight:800;text-decoration:none;cursor:pointer;transition:.2s}
+    .cta-button:hover{background:var(--accent-700);transform:translateY(-1px);box-shadow:0 6px 16px rgba(199,150,44,.35)}
+    .mobile-toggle{display:none;appearance:none;border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;padding:.55rem .65rem;border-radius:8px;cursor:pointer}
+    .hambar{display:block;width:22px;height:2px;background:#fff;position:relative}
+    .hambar::before,.hambar::after{content:"";position:absolute;left:0;right:0;height:2px;background:#fff}
+    .hambar::before{top:-6px}.hambar::after{top:6px}
+    .mobile-menu{display:none;background:rgba(26,54,93,.98);border-top:1px solid rgba(255,255,255,.12)}
+    .mobile-menu.open{display:block}
+    .mobile-menu ul{list-style:none;padding:.5rem 1rem}
+    .mobile-menu a{display:block;padding:.75rem .5rem;color:#fff;text-decoration:none;border-radius:6px}
+    .mobile-menu a:hover{background:rgba(255,255,255,.06)}
+    .mobile-cta{padding:.75rem 1rem 1rem}
+
+    /* Hero */
+    .hero{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;padding:112px 1rem 80px;text-align:center;position:relative;overflow:hidden}
+    .hero::before{content:"";position:absolute;inset:0;background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="g" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="0.5" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="0.3" fill="rgba(255,255,255,0.05)"/><circle cx="50" cy="10" r="0.4" fill="rgba(255,255,255,0.08)"/></pattern></defs><rect width="100" height="100" fill="url(%23g)"/></svg>') center/cover no-repeat;opacity:.3}
+    .hero-content{max-width:860px;margin:0 auto;position:relative;z-index:1}
+    .hero h1{font-size:clamp(2.2rem,4.8vw,4rem);margin-bottom:.6rem;text-shadow:2px 2px 4px rgba(0,0,0,.3)}
+    .hero .subtitle{font-size:1.1rem;color:var(--accent-light);margin-bottom:.35rem}
+    .hero .tagline{font-size:1.05rem;opacity:.95;margin-bottom:1.2rem}
+    .since-badge{display:inline-flex;gap:.4rem;align-items:center;color:#0f2746;background:#ffefc7;border:1px solid #f2d58c;padding:.3rem .6rem;border-radius:999px;font-weight:800;margin-bottom:.75rem}
+    .btn-primary,.btn-secondary{padding:.9rem 1.4rem;border-radius:8px;font-weight:800;font-size:1.05rem;text-decoration:none;display:inline-block}
+    .btn-primary{background:var(--accent);color:#fff;box-shadow:0 10px 24px rgba(199,150,44,.35)}
+    .btn-primary:hover{background:var(--accent-700);transform:translateY(-1px)}
+    .btn-secondary{background:transparent;color:#fff;border:2px solid #fff}
+    .btn-secondary:hover{background:#fff;color:var(--primary)}
+    .faith-accent{position:relative}
+    .faith-accent::after{content:'✨';position:absolute;right:-22px;top:50%;transform:translateY(-50%);color:var(--accent);font-size:.85em}
+
+    /* About */
+    .about{padding:80px 1rem;background:#fff}
+    .container{max-width:1200px;margin:0 auto}
+    .about-content{display:grid;gap:2rem;grid-template-columns:1.05fr .95fr;align-items:center}
+    .about-text h2{font-size:clamp(1.6rem,3vw,2.2rem);color:var(--primary);margin-bottom:.6rem}
+    .about-text p{color:var(--text-light);margin-bottom:1rem;font-size:1.05rem}
+    .about-badge{display:inline-flex;gap:.4rem;align-items:center;background:rgba(199,150,44,.12);border:1px solid rgba(199,150,44,.35);color:#7a5a14;padding:.3rem .6rem;border-radius:999px;font-weight:700;margin:.25rem 0 1rem}
+    .about-image{border-radius:10px;overflow:hidden;box-shadow:0 10px 40px var(--shadow);position:relative;background:#000}
+    .about-image img{width:100%;height:100%;object-fit:cover;display:block;filter:contrast(1.02) saturate(1.02)}
+    .about-caption{position:absolute;bottom:14px;left:14px;right:14px;background:rgba(0,0,0,.65);color:#fff;padding:.8rem 1rem;border-radius:8px;text-align:center}
+
+    /* Pillars Banner */
+    .pillars{background:linear-gradient(90deg,#0e213b,#173a66);color:#fff;padding:28px 1rem}
+    .pillars-inner{max-width:1200px;margin:0 auto;display:grid;gap:1rem;grid-template-columns:repeat(3,1fr);align-items:center}
+    .pillar{display:flex;gap:.8rem;align-items:flex-start;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);padding:12px 14px;border-radius:10px}
+    .pillar .icon{font-size:1.25rem}
+    .pillar h4{margin:0;color:#ffefc7}
+    .pillar p{margin:2px 0 0;color:#d8e6ff;font-size:.95rem}
+    @media (max-width:860px){ .about-content{grid-template-columns:1fr} .pillars-inner{grid-template-columns:1fr} }
+
+    /* Service Hero Sections */
+    .services-intro{padding:48px 1rem;background:var(--bg-light);text-align:center}
+    .services-intro h2{font-size:clamp(1.8rem,3.2vw,2.4rem);color:var(--primary);margin-bottom:.35rem}
+    .services-intro p{color:var(--text-light)}
+    .service-hero{position:relative;min-height:56vh;display:grid;place-items:center;color:#fff;isolation:isolate}
+    .service-hero .bg{position:absolute;inset:0;background-size:cover;background-position:center;background-repeat:no-repeat;transform:scale(1.02)}
+    .service-hero .tint{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,18,30,.45),rgba(10,18,30,.65))}
+    .service-hero .content{position:relative;z-index:2;max-width:1100px;margin:0 auto;padding:48px 1rem;text-align:center}
+    .service-hero h3{font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:.6rem}
+    .service-meta{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;margin-bottom:1rem}
+    .meta-pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);padding:.3rem .6rem;border-radius:999px;font-weight:700}
+    .service-hero p.lead{max-width:820px;margin:0 auto 1rem;color:#eef4ff}
+    .service-bullets{max-width:900px;margin:0 auto 1.2rem;display:grid;gap:.5rem;grid-template-columns:repeat(3,1fr)}
+    .service-bullets li{list-style:none;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);padding:.55rem .7rem;border-radius:8px}
+    .service-cta{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+    .service-cta .btn-primary{box-shadow:none}
+    @media (max-width:900px){ .service-bullets{grid-template-columns:1fr} }
+
+    /* Parallax-ish on large screens */
+    @media (min-width:1024px){ .service-hero .bg{background-attachment:fixed} }
+
+    /* Calculator */
+    .calculator-section{padding:80px 1rem;background:var(--bg-light)}
+    .section-title{font-size:clamp(1.8rem,3vw,2.5rem);color:var(--primary);margin-bottom:.6rem}
+    .section-subtitle{font-size:1.1rem;color:var(--text-light)}
+    .calculator-header{text-align:center;margin-bottom:2rem}
+    .calculator-container{background:#fff;border-radius:14px;padding:1.2rem;box-shadow:0 10px 40px var(--shadow);max-width:1000px;margin:0 auto}
+
+    /* Footer */
+    .footer{background:var(--primary);color:#fff;padding:56px 1rem 28px}
+    .footer-content{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-bottom:1.5rem}
+    .footer-section h3{color:var(--accent);margin-bottom:.6rem}
+    .footer-section p,.footer-section li{color:rgba(255,255,255,.85);margin-bottom:.4rem}
+    .footer-section ul{list-style:none}
+    .footer a{color:rgba(255,255,255,.85);text-decoration:none}
+    .footer a:hover{color:var(--accent)}
+    .footer-badges{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.5rem}
+    .footer-pill{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);padding:.35rem .6rem;border-radius:999px;font-size:.9rem}
+    .footer-bottom{text-align:center;padding-top:1rem;border-top:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.7)}
+
+    /* Animations */
+    .fade-in{opacity:0;transform:translateY(24px);transition:all .6s ease}
+    .fade-in.visible{opacity:1;transform:translateY(0)}
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- Topbar -->
+  <div class="topbar" role="region" aria-label="Highlights">
+    <div class="topbar-inner">
+      <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
+        <span class="since-pill" aria-label="In business since 2003">🏅 Since 2003</span>
+        <span>Faith • Family • Quality Craftsmanship</span>
+      </div>
+      <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
+        <span>📍 Pennsylvania & Charlotte Metro</span>
+        <a href="#contact" aria-label="Contact">📧 info@difiorebuilders.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" role="banner">
+    <nav class="nav" aria-label="Primary">
+      <a href="#home" class="brand">
+        <span class="logo-mark" aria-hidden="true">DB</span>
+        <span class="logo-text">DiFiore Builders</span>
+      </a>
+      <ul class="nav-links" role="menubar">
+        <li role="none"><a role="menuitem" href="#home">Home</a></li>
+        <li role="none"><a role="menuitem" href="#about">About</a></li>
+        <li role="none"><a role="menuitem" href="#services">Services</a></li>
+        <li role="none"><a role="menuitem" href="#calculator">Calculator</a></li>
+        <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:.6rem">
+        <a class="cta-button" href="#calculator">Get Estimate</a>
+        <button class="mobile-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+          <span class="hambar" aria-hidden="true"></span>
+        </button>
+      </div>
+    </nav>
+    <div id="mobileMenu" class="mobile-menu" role="dialog" aria-label="Mobile menu">
+      <ul>
+        <li><a href="#home" data-nav-close>Home</a></li>
+        <li><a href="#about" data-nav-close>About</a></li>
+        <li><a href="#services" data-nav-close>Services</a></li>
+        <li><a href="#calculator" data-nav-close>Calculator</a></li>
+        <li><a href="#contact" data-nav-close>Contact</a></li>
+      </ul>
+      <div class="mobile-cta">
+        <a class="cta-button" href="#calculator" data-nav-close>Get Estimate</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="since-badge" aria-label="In business since 2003">🏆 In business since 2003</div>
+      <h1>Building Dreams with <span class="faith-accent">Faith</span> & Excellence</h1>
+      <p class="subtitle">Serving Pennsylvania • Expanding to Charlotte Metro</p>
+      <p class="tagline">Where quality craftsmanship meets unwavering integrity</p>
+      <div style="display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap">
+        <a href="#calculator" class="btn-primary">Get Your Estimate</a>
+        <a href="#about" class="btn-secondary">Our Story</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <main id="main">
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-content fade-in">
+          <div class="about-text">
+            <span class="about-badge">🏅 In Business Since 2003</span>
+            <h2>Full-Service General Construction — From Foundation to Roof</h2>
+            <p>A full-service general construction company established in 2003, DiFiore Builders Inc. provides quality work from the foundation to the roof of your home. With years of experience to rely on, we specialize in all aspects of building and remodeling — kitchens, bathrooms, new additions, basements, decks, roofing and siding, and more.</p>
+            <p>Being a small, local team, you can expect nothing less than personalized care and attention to detail. We’re proud of our longstanding reputation as your one-call solution here in the Tri-State Area. Get in touch anytime for a quote — we’re always happy to help.</p>
+          </div>
+
+          <figure class="about-image" aria-describedby="about-caption">
+            <picture>
+              <!-- the provided owner + right-hand man image -->
+              <source srcset="https://img1.wsimg.com/isteam/ip/111e2203-c8e6-4588-acfc-521f62348879/1caf07f0-8ccd-4239-a28b-6fbfef42a7dc.jpg/:/rs=w:1240,h:620,cg:true,m/cr=w:1240,h:620" media="(min-width: 600px)">
+              <img src="https://img1.wsimg.com/isteam/ip/111e2203-c8e6-4588-acfc-521f62348879/1caf07f0-8ccd-4239-a28b-6fbfef42a7dc.jpg/:/rs=w:1240,h:620,cg:true,m/cr=w:1240,h:620" alt="The owner of DiFiore Builders and his right-hand man" loading="lazy" width="1240" height="620">
+            </picture>
+            <figcaption id="about-caption" class="about-caption">Our leadership team — committed to personal service and quality craftsmanship.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pillars Banner -->
+    <section class="pillars" aria-label="Our Pillars">
+      <div class="pillars-inner">
+        <div class="pillar">
+          <div class="icon">🛡️</div>
+          <div>
+            <h4>Integrity</h4>
+            <p>Honest estimates, transparent communication, workmanship we stand behind.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="icon">💡</div>
+          <div>
+            <h4>Innovation</h4>
+            <p>Modern materials & smart detailing that elevate performance and style.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="icon">🏠</div>
+          <div>
+            <h4>Impact</h4>
+            <p>Spaces that improve daily life and add lasting value to your home.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Intro -->
+    <section id="services" class="services-intro">
+      <div class="container">
+        <h2>Our Services — Built on Experience Since 2003</h2>
+        <p>From roofs to renovations, additions to new builds — we’ve got you covered.</p>
+      </div>
+    </section>
+
+    <!-- SERVICE: Roofing & Siding -->
+    <section class="service-hero" aria-labelledby="svc-roofing">
+      <div class="bg" style="background-image:url('https://img1.wsimg.com/isteam/ip/111e2203-c8e6-4588-acfc-521f62348879/2-0002.jpg/:/rs=w:1280');"></div>
+      <div class="tint"></div>
+      <div class="content">
+        <div class="service-meta">
+          <span class="meta-pill">🏅 Since 2003</span>
+          <span class="meta-pill">🛡️ Licensed & Insured</span>
+        </div>
+        <h3 id="svc-roofing">Roofing &amp; Siding</h3>
+        <p class="lead">Protect your home with proven systems and clean, durable finishes.</p>
+        <ul class="service-bullets" aria-label="Roofing & Siding capabilities">
+          <li>Traditional Asphalt Dimensional Shingles</li>
+          <li>Standing Seam Metal & Flat Roofs</li>
+          <li>Rubber Membrane</li>
+          <li>Gutter Guard Systems</li>
+          <li>Downspouts & Aluminum</li>
+          <li>Vinyl, Hardie Board, Azek Trim — many styles</li>
+        </ul>
+        <div class="service-cta">
+          <a class="btn-primary" href="#calculator">Get Roofing/Siding Estimate</a>
+          <a class="btn-secondary" href="#contact">Talk to a Specialist</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE: Additions -->
+    <section class="service-hero" aria-labelledby="svc-additions">
+      <div class="bg" style="background-image:url('https://img1.wsimg.com/isteam/ip/111e2203-c8e6-4588-acfc-521f62348879/ca6183c2-7ef0-4157-95d2-7aa7ea2c3b4b/:/cr=t:12.54%25,l:0%25,w:100%25,h:74.92%25/rs=w:600,h:300,cg=true');"></div>
+      <div class="tint"></div>
+      <div class="content">
+        <div class="service-meta">
+          <span class="meta-pill">🏅 Since 2003</span>
+          <span class="meta-pill">🧱 Custom Framing & Finish</span>
+        </div>
+        <h3 id="svc-additions">Additions</h3>
+        <p class="lead">More space, done right — seamlessly integrated with your home.</p>
+        <ul class="service-bullets" aria-label="Additions capabilities">
+          <li>Second Floor Additions & Dormers</li>
+          <li>Master Bedrooms & Bathrooms</li>
+          <li>Family Rooms & Sun Rooms</li>
+          <li>In-Law Quarters</li>
+          <li>Finished Basements</li>
+          <li>Garages & More</li>
+        </ul>
+        <div class="service-cta">
+          <a class="btn-primary" href="#calculator">Get Additions Estimate</a>
+          <a class="btn-secondary" href="#contact">Discuss Your Plans</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE: Renovations (Kitchen/Bath/Basements) with rotating background -->
+    <section class="service-hero" aria-labelledby="svc-reno">
+      <div id="renoBg" class="bg"></div>
+      <div class="tint"></div>
+      <div class="content">
+        <div class="service-meta">
+          <span class="meta-pill">🏅 Since 2003</span>
+          <span class="meta-pill">🖼️ Design-Driven</span>
+        </div>
+        <h3 id="svc-reno">Renovations — Kitchens, Bathrooms, Basements</h3>
+        <p class="lead">Functional, beautiful spaces with thoughtful details and durable finishes.</p>
+        <ul class="service-bullets" aria-label="Renovations capabilities">
+          <li>Kitchens — cabinetry, counters, lighting, layout</li>
+          <li>Bathrooms — tile, showers, accessibility</li>
+          <li>Finished Basements — living, office, play</li>
+          <li>Windows, Siding, Roofing tie-ins</li>
+          <li>Fences, Decks, Patios</li>
+          <li>Permits & project management</li>
+        </ul>
+        <div class="service-cta">
+          <a class="btn-primary" href="#calculator">Get Renovation Estimate</a>
+          <a class="btn-secondary" href="#contact">See If We’re a Fit</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE: New Builds & General Construction -->
+    <section class="service-hero" aria-labelledby="svc-builds">
+      <div class="bg" style="background-image:url('https://img1.wsimg.com/isteam/ip/111e2203-c8e6-4588-acfc-521f62348879/1-0002.jpg/:/rs=w:1280');"></div>
+      <div class="tint"></div>
+      <div class="content">
+        <div class="service-meta">
+          <span class="meta-pill">🏅 Since 2003</span>
+          <span class="meta-pill">📐 Full-Service GC</span>
+        </div>
+        <h3 id="svc-builds">New Builds &amp; General Construction</h3>
+        <p class="lead">From ground-up to whole-home updates, we manage every detail.</p>
+        <ul class="service-bullets" aria-label="New Builds capabilities">
+          <li>Custom Homes & Major Renovations</li>
+          <li>Siding/Roofing/Windows packages</li>
+          <li>Fences, Decks, Patios & Hardscape</li>
+          <li>Structural & Framing</li>
+          <li>Energy-smart materials</li>
+          <li>Trusted trade partners</li>
+        </ul>
+        <div class="service-cta">
+          <a class="btn-primary" href="#calculator">Start Your Project</a>
+          <a class="btn-secondary" href="#contact">Contact Our Team</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calculator -->
+    <section id="calculator" class="calculator-section" aria-labelledby="calc-title">
+      <div class="container">
+        <div class="calculator-header fade-in">
+          <h2 id="calc-title" class="section-title">Get Your Project Estimate</h2>
+          <p class="section-subtitle">Honest pricing for quality work. No hidden fees, no surprises.</p>
+        </div>
+        <div class="calculator-container fade-in">
+          <div id="hb-calculator"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact" class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>DiFiore Builders</h3>
+          <p>Building dreams with faith and excellence since 2003.</p>
+          <div class="footer-badges">
+            <span class="footer-pill">🏆 Since 2003</span>
+            <span class="footer-pill">🔧 Workmanship Warranty</span>
+            <span class="footer-pill">🛡️ Licensed &amp; Insured</span>
+          </div>
+          <p style="margin-top:.6rem"><strong>Pennsylvania Office:</strong><br/>Serving Central PA</p>
+          <p><strong>Charlotte Metro:</strong><br/>Serving the greater Charlotte area</p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Our Services</h3>
+          <ul>
+            <li><a href="#services">Roofing & Siding</a></li>
+            <li><a href="#services">Additions</a></li>
+            <li><a href="#services">Kitchens & Bathrooms</a></li>
+            <li><a href="#services">New Builds</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>📞 Call for immediate assistance</p>
+          <p>📧 info@difiorebuilders.com</p>
+          <p>📍 Serving PA &amp; Charlotte Metro</p>
+          <p>⏰ Mon–Sat: 7AM–6PM</p>
+          <p>🙏 Christian-owned family business</p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Why Choose Us</h3>
+          <ul>
+            <li>20+ years of experience</li>
+            <li>Family-owned &amp; operated</li>
+            <li>Christian values &amp; integrity</li>
+            <li>Licensed &amp; fully insured</li>
+            <li>Workmanship warranty</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 DiFiore Builders. All rights reserved. | Established 2003 • Faith • Family • Quality</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Calculator Styles (your original theme, retained) -->
+  <style>
+    :root{
+      --bg:#f8fafc; --panel:#ffffff; --text:#0f172a; --muted:#64748b; --primary:#1a365d; --primary2:#2d5a87;
+      --ring:#7c9cbd; --border:#e5e7eb; --green:#059669; --orange:#ea580c; --purple:#7c3aed;
+    }
+    #hb-calculator *{box-sizing:border-box}
+    #hb-calculator{font-family:Georgia, serif;color:var(--text);background:#fff;padding:0}
+    .hb-wrap{max-width:960px;margin:0 auto}
+    .hb-title{font-weight:800;font-size:clamp(28px,4vw,40px);margin:0 0 8px;color:var(--primary)}
+    .hb-sub{color:var(--muted);margin:0 0 24px}
+    .hb-progress{margin-bottom:20px}
+    .hb-bar{height:10px;background:#fff;border-radius:999px;overflow:hidden;box-shadow:inset 0 0 0 1px #e2e8f0}
+    .hb-fill{height:100%;background:linear-gradient(90deg,var(--primary),var(--primary2));width:0%;transition:width .3s ease}
+    .hb-steps{display:flex;justify-content:space-between;margin-top:8px;font-size:12px;color:var(--muted)}
+    .hb-steps span.active{color:var(--primary);font-weight:600}
+    .hb-panel{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:24px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+    .hb-section-title{font-size:20px;font-weight:700;margin:0 0 8px;color:var(--primary)}
+    .hb-section-sub{color:var(--muted);margin:0 0 16px}
+    .grid{display:grid;gap:16px}
+    .g-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .g-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    @media (max-width:820px){.g-2,.g-3{grid-template-columns:1fr}}
+    .field{display:flex;flex-direction:column;gap:6px}
+    .label{font-size:14px;font-weight:600}
+    .hint{color:var(--muted);font-size:12px}
+    .input,.select,.textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid #cbd5e1;background:#fff;outline:none}
+    .input:focus,.select:focus,.textarea:focus{border-color:var(--primary);box-shadow:0 0 0 3px var(--ring)}
+    .muted{color:#475569}
+    .calc-read{background:#f8fafc;border:1px solid #e2e8f0;color:#334155;font-weight:600}
+    .pill{padding:12px;border-radius:12px;border:2px solid #e5e7eb;text-align:left;cursor:pointer;background:#fff;transition:.2s ease}
+    .pill:hover{box-shadow:0 6px 20px rgba(2,6,23,.06)}
+    .pill.active{border-color:var(--primary);background:#f0f8ff;box-shadow:0 8px 24px rgba(26,54,93,.1)}
+    .pill .icon{font-size:28px;margin-bottom:8px}
+    .est-box{background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px;text-align:center}
+    .est-box.emph{border-width:2px;border-color:var(--primary)}
+    .t-con{color:#16a34a;font-weight:800}
+    .t-mid{color:var(--primary);font-weight:900;font-size:22px}
+    .t-prem{color:var(--orange);font-weight:800}
+    .tag{display:inline-block;padding:4px 8px;border-radius:999px;background:#ecfeff;border:1px solid #a5f3fc;color:#0369a1;font-size:12px}
+    .row{display:flex;gap:12px;justify-content:space-between;font-size:14px;color:#475569}
+    .btns{display:flex;justify-content:space-between;gap:12px;margin-top:18px}
+    .btn{border-radius:12px;padding:12px 18px;border:1px solid #cbd5e1;background:#fff;cursor:pointer;transition:.2s ease}
+    .btn:hover{background:#f8fafc}
+    .btn.primary{background:linear-gradient(90deg,var(--primary),var(--primary2));color:#fff;border:none;box-shadow:0 10px 24px rgba(26,54,93,.2)}
+    .btn.primary:hover{filter:brightness(.95)}
+    .btn:disabled{opacity:.5;cursor:not-allowed}
+    .hidden{display:none !important}
+    .ok{color:#16a34a}
+    .warn{color:#b45309}
+  </style>
+
+  <!-- Scripts: nav, fade-ins, services bg rotation, calculator -->
+  <script>
+    // Fade-in on scroll
+    const io = new IntersectionObserver((entries)=>entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); }),{threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    window.addEventListener('DOMContentLoaded', ()=>{
+      document.querySelectorAll('.fade-in').forEach(el=>io.observe(el));
+
+      // Smooth anchor scroll (account for sticky header)
+      const headerOffset = 86;
+      document.querySelectorAll('a[href^="#"]').forEach(link=>{
+        link.addEventListener('click', (e)=>{
+          const id = link.getAttribute('href');
+          if(!id || id === '#') return;
+          const target = document.querySelector(id);
+          if(!target) return;
+          e.preventDefault();
+          const y = target.getBoundingClientRect().top + window.scrollY - headerOffset;
+          window.scrollTo({top:y, behavior:'smooth'});
+        });
+      });
+
+      // Header elevation on scroll
+      const hdr = document.querySelector('.header');
+      const onScroll = ()=>{ hdr.style.boxShadow = window.scrollY>60 ? '0 8px 24px rgba(0,0,0,.12)' : 'none'; };
+      onScroll(); window.addEventListener('scroll', onScroll);
+
+      // Mobile menu
+      const toggle = document.getElementById('navToggle');
+      const menu = document.getElementById('mobileMenu');
+      const setOpen = (open)=>{ menu.classList.toggle('open', open); toggle.setAttribute('aria-expanded', open?'true':'false'); document.body.style.overflow = open ? 'hidden' : ''; };
+      toggle.addEventListener('click', ()=> setOpen(!menu.classList.contains('open')));
+      menu.querySelectorAll('[data-nav-close]').forEach(a=> a.addEventListener('click', ()=> setOpen(false)));
+      document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') setOpen(false); });
+
+      // Renovations hero rotating backgrounds (your 3 kitchen images)
+      const reno = document.getElementById('renoBg');
+      const renoImages = [
+        "https://img1.wsimg.com/isteam/ip/111e2203-c8e6-4588-acfc-521f62348879/09a8dd7e-59a2-414a-b97a-f39054128a03/:/rs=w:1280",
+        "https://img1.wsimg.com/isteam/ip/111e2203-c8e6-4588-acfc-521f62348879/9308c6d3-7bdc-497c-a3d6-1d315f120ca5/:/rs=w:1280",
+        "https://img1.wsimg.com/isteam/ip/111e2203-c8e6-4588-acfc-521f62348879/91bf5636-6fb9-4d46-a0b3-ebe0db026595/:/rs=w:1280"
+      ];
+      let renoIdx = 0;
+      function setReno(i){
+        reno.style.transition = 'opacity .6s ease';
+        reno.style.opacity = '0';
+        setTimeout(()=>{
+          reno.style.backgroundImage = `url('${renoImages[i]}')`;
+          reno.style.opacity = '1';
+        }, 300);
+      }
+      // Preload images to avoid flash
+      renoImages.forEach(src => { const img = new Image(); img.src = src; });
+      setReno(renoIdx);
+      setInterval(()=>{ renoIdx = (renoIdx+1)%renoImages.length; setReno(renoIdx); }, 5000);
+    });
+  </script>
+
+  <!-- Calculator (original logic preserved) -->
+  <script>
+  (function(){
+    const DEFAULTS = {
+      laborMultiplier: 1.0,
+      materialMultiplier: 1.0,
+      roofingBasePerSquare: 525,
+      roofingTearOffPerSquare: 95,
+      roofingComplexity: { simple: 1.0, complex: 1.25, very_complex: 1.45 },
+      roofingMaterialFactor: {
+        asphalt_3tab: 0.9,
+        architectural: 1.0,
+        metal_standing: 2.2,
+        cedar: 1.8,
+        slate_synthetic: 2.6
+      },
+      deckCostPerSqft: { standard_pt: 55, popular_comp: 85, premium_comp: 110 },
+      deckStairsAdder: 1200,
+      deckRailingLFPerFt: { none: 0, basic: 25, metal: 60 },
+      bathBase: {
+        powder: { standard: 8000, popular: 12000, premium: 18000 },
+        guest_full: { standard: 18000, popular: 28000, premium: 40000 },
+        primary: { standard: 35000, popular: 55000, premium: 80000 }
+      },
+      bathLayoutFactor: { none: 1.0, minor: 1.15, major: 1.35 },
+      bathShowerAdder: { tub_shower: 0, walk_in_tile: 7000, curbless_tile: 12000 },
+      vanityPerFoot: { standard: 350, popular: 600, premium: 900 }
+    };
+
+    const state = {
+      step: 0,
+      project: "",
+      address: { address: "", propertyType: "single_family", homeAge: "10-30years", stories: "2" },
+      details: {},
+      contact: {}
+    };
+
+    const $root = document.getElementById("hb-calculator");
+    const currency = n => new Intl.NumberFormat("en-US",{style:"currency",currency:"USD",maximumFractionDigits:0}).format(Math.round(n||0));
+    const clamp = (n,min,max)=>Math.max(min,Math.min(max,n));
+    const progressPct = () => ((state.step + 1) / 5) * 100;
+    const isValidAddress = () => state.address.address && state.address.address.trim().length > 6;
+    const isValidProject = () => !!state.project;
+    const isValidContact = () => { const c = state.contact; return c.firstName && c.lastName && c.email && /.+@.+\..+/.test(c.email); };
+
+    function estimateRoofing(v){
+      const squares = Math.max(1, Math.round(((Number(v.roofSqft)||2200)/100)*10)/10);
+      const base = DEFAULTS.roofingBasePerSquare*DEFAULTS.laborMultiplier*DEFAULTS.materialMultiplier;
+      const material = v.material || "architectural";
+      const complexity = v.complexity || "complex";
+      const mf = DEFAULTS.roofingMaterialFactor[material] || 1;
+      const cf = DEFAULTS.roofingComplexity[complexity] || 1.25;
+      const tear = (v.tearOff ?? true) ? DEFAULTS.roofingTearOffPerSquare : 0;
+      const perSquare = base*mf*cf + tear;
+      const mid = perSquare * squares;
+      return { low: mid*0.92, mid, high: mid*1.08, perSquare, squares };
+    }
+    function estimateDeck(v){
+      const sqft = Number(v.deckSqft)||300;
+      const mat = v.material || "popular_comp";
+      const deckCost = (DEFAULTS.deckCostPerSqft[mat]||85)*sqft*DEFAULTS.laborMultiplier*DEFAULTS.materialMultiplier;
+      const stairsCost = (v.stairs ?? true) ? DEFAULTS.deckStairsAdder : 0;
+      const rType = v.railing || "basic";
+      const railingCost = (DEFAULTS.deckRailingLFPerFt[rType]||0) * (v.railingFeet||40);
+      const total = deckCost + stairsCost + railingCost;
+      return { low: total*0.9, mid: total, high: total*1.1, breakdown:{deck:deckCost, stairs:stairsCost, railing:railingCost} };
+    }
+    function estimateBath(v){
+      const type = v.bathType || "guest_full";
+      const finish = v.finishLevel || "popular";
+      const base = (DEFAULTS.bathBase[type]||{})[finish] || 28000;
+      const lf = DEFAULTS.bathLayoutFactor[v.layoutChange || "minor"] || 1.15;
+      const shower = DEFAULTS.bathShowerAdder[v.showerType || "tub_shower"] || 0;
+      const vanity = (DEFAULTS.vanityPerFoot[finish]||0) * (Number(v.vanityLength)||5);
+      const total = base*lf*DEFAULTS.laborMultiplier*DEFAULTS.materialMultiplier + shower + vanity;
+      return { low: total*0.85, mid: total, high: total*1.25, breakdown:{base:base*lf, shower, vanity} };
+    }
+    function currentEstimate(){
+      if(state.project==="roofing") return estimateRoofing(state.details);
+      if(state.project==="deck") return estimateDeck(state.details);
+      if(state.project==="bathroom") return estimateBath(state.details);
+      return null;
+    }
+
+    function header(){
+      return `
+        <div class="hb-wrap">
+          <h1 class="hb-title">Project Cost Calculator</h1>
+          <p class="hb-sub">Get accurate estimates for your home improvement project</p>
+          <div class="hb-progress">
+            <div class="hb-bar"><div class="hb-fill" style="width:${progressPct()}%"></div></div>
+            <div class="hb-steps">
+              <span class="${state.step>=0?'active':''}">Address</span>
+              <span class="${state.step>=1?'active':''}">Project</span>
+              <span class="${state.step>=2?'active':''}">Details</span>
+              <span class="${state.step>=3?'active':''}">Contact</span>
+              <span class="${state.step>=4?'active':''}">Review</span>
+            </div>
+          </div>
+          <div class="hb-panel">${sectionContent()}</div>
+          <div class="btns">
+            <button class="btn" id="hb-prev" ${state.step===0?'disabled':''}>← Previous</button>
+            <button class="btn primary" id="hb-next">${state.step===4?'Submit Request':'Next →'}</button>
+          </div>
+        </div>
+      `;
+    }
+    const projectDefs = [
+      {id:"roofing", name:"Roofing Replacement", icon:"🏠", desc:"Complete roof replacement with quality materials"},
+      {id:"deck", name:"Deck Construction", icon:"🏗️", desc:"Custom deck building and installation"},
+      {id:"bathroom", name:"Bathroom Remodel", icon:"🚿", desc:"Complete bathroom renovation"}
+    ];
+    function titleForStep(){
+      if(state.step===0) return "Project Location";
+      if(state.step===1) return "What project are you planning?";
+      if(state.step===2) return (projectDefs.find(p=>p.id===state.project)?.name || "Project") + " Details";
+      if(state.step===3) return "Contact Information";
+      if(state.step===4) return "Review & Submit";
+      return "Project Calculator";
+    }
+    function sectionContent(){ return `<div><div class="hb-section-title">${titleForStep()}</div>${stepBody()}</div>`; }
+    function stepBody(){
+      switch(state.step){
+        case 0: return addressStep();
+        case 1: return projectStep();
+        case 2: return detailsStep();
+        case 3: return contactStep();
+        case 4: return reviewStep();
+        default: return '';
+      }
+    }
+    function addressStep(){
+      const v = state.address;
+      return `
+        <div class="hb-section-sub">Enter the address where your project will take place</div>
+        <div class="grid g-1">
+          <div class="field">
+            <label class="label">Property Address *</label>
+            <input class="input" id="addr-address" placeholder="123 Main Street, City, ST 12345" value="${escapeHtml(v.address||'')}">
+            <div class="hint">${isValidAddress()?'<span class="ok">Looks good ✔️</span>':'Start typing your address'}</div>
+          </div>
+        </div>
+        <div class="grid g-3" style="margin-top:12px">
+          <div class="field">
+            <label class="label">Property Type</label>
+            <select class="select" id="addr-type">
+              ${options([["single_family","Single Family Home"],["townhouse","Townhouse"],["condo","Condominium"],["duplex","Duplex"],["commercial","Commercial Property"]], v.propertyType||"single_family")}
+            </select>
+          </div>
+          <div class="field">
+            <label class="label">Home Age (approx.)</label>
+            <select class="select" id="addr-age">
+              ${options([["new","Less than 5 years"],["5-10years","5-10 years"],["10-30years","10-30 years"],["30-50years","30-50 years"],["50years+","50+ years"]], v.homeAge||"10-30years")}
+            </select>
+          </div>
+          <div class="field">
+            <label class="label">Stories</label>
+            <select class="select" id="addr-stories">
+              ${options([["1","1 Story"],["2","2 Stories"],["3","3+ Stories"]], v.stories||"2")}
+            </select>
+          </div>
+        </div>
+      `;
+    }
+    function projectStep(){
+      return `
+        <p class="hb-section-sub">Choose the type of project you're planning:</p>
+        <div class="grid g-3">
+          ${projectDefs.map(p => `
+            <button class="pill ${state.project===p.id?'active':''}" data-project="${p.id}">
+              <div class="icon">${p.icon}</div>
+              <div style="font-weight:700">${p.name}</div>
+              <div class="muted" style="font-size:14px">${p.desc}</div>
+            </button>
+          `).join('')}
+        </div>
+      `;
+    }
+    function detailsStep(){
+      if(state.project==="roofing") return roofingDetails();
+      if(state.project==="deck") return deckDetails();
+      if(state.project==="bathroom") return bathDetails();
+      return `<div class="muted">Please select a project type first.</div>`;
+    }
+    function roofingDetails(){
+      const v = state.details;
+      const est = estimateRoofing(v);
+      return `
+        <div class="grid g-2">
+          <div class="field">
+            <label class="label">Roof area (sq.ft)</label>
+            <input class="input" id="roof-sqft" type="number" min="300" max="20000" step="50" value="${Number(v.roofSqft??2200)}">
+            <div class="hint">Typical home: 1,800–3,000 sq.ft</div>
+          </div>
+          <div class="field">
+            <label class="label">Tear-off existing roof?</label>
+            <select class="select" id="roof-tear">
+              ${options([["yes","Yes — remove & dispose (Most common)"],["no","No — overlay (if code allows)"]], (v.tearOff??true)?"yes":"no")}
+            </select>
+          </div>
+        </div>
+        <div class="grid g-3" style="margin-top:12px">
+          <div class="field">
+            <label class="label">Material</label>
+            <select class="select" id="roof-mat">
+              ${options([
+                ["asphalt_3tab","Asphalt 3-Tab — Standard"],
+                ["architectural","Architectural Asphalt — Most Popular"],
+                ["metal_standing","Standing-Seam Metal — Premium"],
+                ["cedar","Cedar Shake — Premium"],
+                ["slate_synthetic","Slate (Synthetic) — Luxury"]
+              ], v.material||"architectural")}
+            </select>
+          </div>
+          <div class="field">
+            <label class="label">Roof complexity</label>
+            <select class="select" id="roof-cx">
+              ${options([
+                ["simple","Simple (low pitch, few planes)"],
+                ["complex","Complex — Most Popular"],
+                ["very_complex","Very Complex (steep/many planes)"]
+              ], v.complexity||"complex")}
+            </select>
+          </div>
+          <div class="field">
+            <label class="label">Calculated</label>
+            <input class="input calc-read" disabled value="${est.squares} squares @ ${currency(est.perSquare)}/sq.">
+          </div>
+        </div>
+        ${estimateBlock(est, "blue")}
+      `;
+    }
+    function deckDetails(){
+      const v = state.details;
+      const est = estimateDeck(v);
+      return `
+        <div class="grid g-2">
+          <div class="field">
+            <label class="label">Deck size (sq.ft)</label>
+            <input class="input" id="deck-sqft" type="number" min="100" max="2000" step="25" value="${Number(v.deckSqft??300)}">
+            <div class="hint">Typical deck: 200–500 sq.ft</div>
+          </div>
+          <div class="field">
+            <label class="label">Railing length (linear ft)</label>
+            <input class="input" id="deck-rail-ft" type="number" min="0" max="200" step="5" value="${Number(v.railingFeet??40)}">
+            <div class="hint">Perimeter needing railings</div>
+          </div>
+        </div>
+        <div class="grid g-3" style="margin-top:12px">
+          <div class="field">
+            <label class="label">Decking Material</label>
+            <select class="select" id="deck-mat">
+              ${options([
+                ["standard_pt","Pressure Treated — Standard"],
+                ["popular_comp","Composite Boards — Most Popular"],
+                ["premium_comp","Premium Composite — Luxury"]
+              ], v.material||"popular_comp")}
+            </select>
+          </div>
+          <div class="field">
+            <label class="label">Stairs included?</label>
+            <select class="select" id="deck-stairs">
+              ${options([["yes","Yes — Standard stairs"],["no","No stairs needed"]], (v.stairs??true)?"yes":"no")}
+            </select>
+          </div>
+          <div class="field">
+            <label class="label">Railing type</label>
+            <select class="select" id="deck-rail-type">
+              ${options([["none","No railings"],["basic","Basic wood — Most Popular"],["metal","Metal/Cable — Premium"]], v.railing||"basic")}
+            </select>
+          </div>
+        </div>
+        ${estimateBlock(est, "green", est.breakdown)}
+      `;
+    }
+    function bathDetails(){
+      const v = state.details;
+      const est = estimateBath(v);
+      return `
+        <div class="grid g-2">
+          <div class="field">
+            <label class="label">Bathroom type</label>
+            <select class="select" id="bath-type">
+              ${options([["powder","Powder room (½ bath)"],["guest_full","Guest full bath — Most Popular"],["primary","Primary suite bathroom"]], v.bathType||"guest_full")}
+            </select>
+          </div>
+          <div class="field">
+            <label class="label">Finish level</label>
+            <select class="select" id="bath-finish">
+              ${options([["standard","Standard finishes"],["popular","Popular finishes — Most Popular"],["premium","Premium finishes"]], v.finishLevel||"popular")}
+            </select>
+          </div>
+        </div>
+        <div class="grid g-3" style="margin-top:12px">
+          <div class="field">
+            <label class="label">Layout changes</label>
+            <select class="select" id="bath-layout">
+              ${options([["none","Keep existing layout"],["minor","Minor changes — Most Popular"],["major","Major layout changes"]], v.layoutChange||"minor")}
+            </select>
+          </div>
+          <div class="field">
+            <label class="label">Shower type</label>
+            <select class="select" id="bath-shower">
+              ${options([["tub_shower","Standard tub/shower"],["walk_in_tile","Walk-in tile shower"],["curbless_tile","Curbless tile shower — Premium"]], v.showerType||"tub_shower")}
+            </select>
+          </div>
+          <div class="field">
+            <label class="label">Vanity length (feet)</label>
+            <input class="input" id="bath-vanity" type="number" min="2" max="12" step="1" value="${Number(v.vanityLength??5)}">
+          </div>
+        </div>
+        ${estimateBlock(est, "purple", est.breakdown)}
+      `;
+    }
+    function reviewStep(){
+      const project = projectDefs.find(p=>p.id===state.project);
+      const est = currentEstimate();
+      return `
+        <div class="grid g-1" style="gap:18px">
+          <div style="background:linear-gradient(90deg,#f8fafc,#eef2ff);border:1px solid #e5e7eb;border-radius:12px;padding:16px">
+            <div style="font-weight:700;margin-bottom:10px;color:var(--primary);">Project Summary</div>
+            <div class="grid g-2" style="font-size:14px;color:#334155">
+              <div><strong>Address:</strong> ${escapeHtml(state.address.address||"—")}</div>
+              <div><strong>Project:</strong> ${project?project.name:"—"}</div>
+              <div><strong>Contact:</strong> ${(state.contact.firstName||"")} ${(state.contact.lastName||"")}</div>
+              <div><strong>Email:</strong> ${state.contact.email||"—"}</div>
+              <div><strong>Phone:</strong> ${state.contact.phone||"Not provided"}</div>
+              <div><strong>Timeline:</strong> ${state.contact.timeline||"—"}</div>
+            </div>
+          </div>
+          ${est ? `
+            <div style="background:#f0f9ff;border:1px solid #bae6fd;border-radius:12px;padding:16px">
+              <div class="row"><span class="tag">Estimated Cost Range</span></div>
+              <div class="grid g-3" style="margin-top:12px">
+                <div class="est-box"><div class="muted">Conservative</div><div class="t-con">${currency(est.low)}</div></div>
+                <div class="est-box emph"><div style="color:var(--primary);font-weight:700">Most Likely</div><div class="t-mid">${currency(est.mid)}</div></div>
+                <div class="est-box"><div class="muted">Premium</div><div class="t-prem">${currency(est.high)}</div></div>
+              </div>
+            </div>
+            <div style="background:linear-gradient(135deg,#1a365d,#2d5a87);color:#fff;border-radius:12px;padding:16px;text-align:center">
+              <div style="font-size:1.05rem;margin-bottom:6px;">✨ <strong>DiFiore Promise</strong> ✨</div>
+              <p style="margin:0;opacity:.95;font-size:.95rem;">Every estimate includes our commitment to faith-based service, quality materials, and workmanship warranty</p>
+              <div style="margin-top:.5rem;display:inline-flex;gap:.5rem;flex-wrap:wrap">
+                <span class="tag">Since 2003</span><span class="tag">Licensed & Insured</span>
+              </div>
+            </div>
+          `:''}
+          <div style="text-align:center;margin-top:6px">
+            <button class="btn primary" id="hb-submit" style="font-size:1.05rem;padding:.9rem 1.4rem;">Submit Project Request 🙏</button>
+          </div>
+        </div>
+      `;
+    }
+    function estimateBlock(est,color,breakdown){
+      const bg = color==="green" ? "linear-gradient(90deg,#ecfdf5,#d1fae5)" : color==="purple" ? "linear-gradient(90deg,#faf5ff,#fce7f3)" : "linear-gradient(90deg,#eff6ff,#e0e7ff)";
+      const border = color==="green" ? "#bbf7d0" : color==="purple" ? "#e9d5ff" : "#bfdbfe";
+      return `
+        <div style="background:${bg};border:1px solid ${border};border-radius:12px;padding:16px;margin-top:12px">
+          <div class="grid g-3" style="text-align:center;margin-bottom:8px">
+            <div class="est-box"><div class="muted">Conservative</div><div class="t-con">${currency(est.low)}</div></div>
+            <div class="est-box emph"><div style="color:var(--primary);font-weight:700">Most Likely</div><div class="t-mid">${currency(est.mid)}</div></div>
+            <div class="est-box"><div class="muted">Premium</div><div class="t-prem">${currency(est.high)}</div></div>
+          </div>
+          ${breakdown ? `
+            <div class="grid g-3" style="font-size:14px;color:#475569">
+              ${breakdown.deck!==undefined?`<div>Decking: <strong>${currency(breakdown.deck)}</strong></div>`:''}
+              ${breakdown.stairs!==undefined?`<div>Stairs: <strong>${currency(breakdown.stairs)}</strong></div>`:''}
+              ${breakdown.railing!==undefined?`<div>Railing: <strong>${currency(breakdown.railing)}</strong></div>`:''}
+              ${breakdown.base!==undefined?`<div>Base: <strong>${currency(breakdown.base)}</strong></div>`:''}
+              ${breakdown.shower!==undefined?`<div>Shower: <strong>${currency(breakdown.shower)}</strong></div>`:''}
+              ${breakdown.vanity!==undefined?`<div>Vanity: <strong>${currency(breakdown.vanity)}</strong></div>`:''}
+            </div>`:''}
+        </div>
+      `;
+    }
+    const escMap={'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}; const escapeHtml=s=>String(s).replace(/[&<>"']/g,ch=>escMap[ch]);
+    function options(arr,value){return arr.map(([v,l])=>`<option value="${v}" ${value===v?'selected':''}>${l}</option>`).join('')}
+
+    function render(){
+      $root.innerHTML = header();
+      $root.querySelector("#hb-prev").addEventListener("click", ()=>{ state.step = Math.max(0, state.step-1); render(); });
+      $root.querySelector("#hb-next").addEventListener("click", ()=>{
+        if(state.step===0 && !isValidAddress()){ alert("Please enter a valid address."); return; }
+        if(state.step===1 && !isValidProject()){ alert("Please select a project type first."); return; }
+        if(state.step===3 && !isValidContact()){ alert("Please fill in required contact information."); return; }
+        if(state.step===4){
+          const method = state.contact.contactPreference || "email";
+          const project = projectDefs.find(p=>p.id===state.project);
+          const est = currentEstimate();
+          alert(`🙏 Thank you ${state.contact.firstName||""}! Your ${project?.name||"project"} estimate for ${state.address.address||"your property"} has been submitted.\n\nEstimated range: ${est ? currency(est.low) + ' - ' + currency(est.high) : 'TBD'}\n\nWe'll contact you within 24 hours via ${method} to discuss your project. God bless!`);
+          return;
+        }
+        state.step = Math.min(4, state.step+1); render();
+      });
+
+      if(state.step===0){
+        const a=state.address;
+        bind("#addr-address","input",e=>{a.address=e.target.value;});
+        bind("#addr-type","change",e=>{a.propertyType=e.target.value;});
+        bind("#addr-age","change",e=>{a.homeAge=e.target.value;});
+        bind("#addr-stories","change",e=>{a.stories=e.target.value;});
+      }
+      if(state.step===1){
+        $root.querySelectorAll("[data-project]").forEach(btn=>{
+          btn.addEventListener("click", ()=>{ state.project = btn.getAttribute("data-project"); state.details = {}; render(); });
+        });
+      }
+      if(state.step===2){
+        if(state.project==="roofing"){
+          const d=state.details; const bindRoof=()=>{ d.roofSqft=clamp(Number(val("#roof-sqft")),300,20000); d.tearOff=val("#roof-tear")==="yes"; d.material=val("#roof-mat"); d.complexity=val("#roof-cx"); render(); };
+          ["#roof-sqft","#roof-tear","#roof-mat","#roof-cx"].forEach(sel=>{ bind(sel,"input",bindRoof); bind(sel,"change",bindRoof); });
+        }
+        if(state.project==="deck"){
+          const d=state.details; const bindDeck=()=>{ d.deckSqft=clamp(Number(val("#deck-sqft")),100,2000); d.railingFeet=clamp(Number(val("#deck-rail-ft")),0,200); d.material=val("#deck-mat"); d.stairs=val("#deck-stairs")==="yes"; d.railing=val("#deck-rail-type"); render(); };
+          ["#deck-sqft","#deck-rail-ft","#deck-mat","#deck-stairs","#deck-rail-type"].forEach(sel=>{ bind(sel,"input",bindDeck); bind(sel,"change",bindDeck); });
+        }
+        if(state.project==="bathroom"){
+          const d=state.details; const bindBath=()=>{ d.bathType=val("#bath-type"); d.finishLevel=val("#bath-finish"); d.layoutChange=val("#bath-layout"); d.showerType=val("#bath-shower"); d.vanityLength=clamp(Number(val("#bath-vanity")),2,12); render(); };
+          ["#bath-type","#bath-finish","#bath-layout","#bath-shower","#bath-vanity"].forEach(sel=>{ bind(sel,"input",bindBath); bind(sel,"change",bindBath); });
+        }
+      }
+      if(state.step===3){
+        const map={"#c-first":"firstName","#c-last":"lastName","#c-email":"email","#c-phone":"phone","#c-pref":"contactPreference","#c-best":"bestTime","#c-time":"timeline","#c-notes":"notes"};
+        Object.entries(map).forEach(([sel,key])=>{ bind(sel,"input",e=>state.contact[key]=e.target.value); bind(sel,"change",e=>state.contact[key]=e.target.value); });
+      }
+      if(state.step===4){
+        const btn=$root.querySelector("#hb-submit");
+        if(btn){ btn.addEventListener("click", ()=>{ const method=state.contact.contactPreference || "email"; const project=projectDefs.find(p=>p.id===state.project); const est=currentEstimate(); alert(`🙏 Thank you ${state.contact.firstName||""}! Your ${project?.name||"project"} estimate for ${state.address.address||"your property"} has been submitted.\n\nEstimated range: ${est ? currency(est.low) + ' - ' + currency(est.high) : 'TBD'}\n\nWe'll contact you within 24 hours via ${method} to discuss your project. God bless!`); }); }
+      }
+    }
+    function contactStep(){
+      const c = state.contact;
+      return `
+        <div class="hb-section-sub">Let's connect! We'd love to discuss your project and provide a detailed estimate.</div>
+        <div class="grid g-2">
+          <div class="field">
+            <label class="label">First Name *</label>
+            <input class="input" id="c-first" value="${escapeHtml(c.firstName||'')}" placeholder="John">
+          </div>
+          <div class="field">
+            <label class="label">Last Name *</label>
+            <input class="input" id="c-last" value="${escapeHtml(c.lastName||'')}" placeholder="Smith">
+          </div>
+        </div>
+        <div class="grid g-2" style="margin-top:12px">
+          <div class="field">
+            <label class="label">Email *</label>
+            <input class="input" id="c-email" value="${escapeHtml(c.email||'')}" placeholder="john@email.com">
+          </div>
+          <div class="field">
+            <label class="label">Phone</label>
+            <input class="input" id="c-phone" value="${escapeHtml(c.phone||'')}" placeholder="(555) 123-4567">
+          </div>
+        </div>
+        <div class="field" style="margin-top:12px">
+          <label class="label">Preferred contact method</label>
+          <select class="select" id="c-pref">
+            ${options([["email","Email — Most Popular"],["phone","Phone call"],["text","Text message"],["either","Either phone or email"]], c.contactPreference||"email")}
+          </select>
+        </div>
+        <div class="grid g-2" style="margin-top:12px">
+          <div class="field">
+            <label class="label">Best time to contact</label>
+            <select class="select" id="c-best">
+              ${options([["morning","Morning (8am-12pm)"],["afternoon","Afternoon (12pm-5pm)"],["evening","Evening (5pm-8pm)"],["anytime","Anytime — Most Popular"]], c.bestTime||"anytime")}
+            </select>
+          </div>
+          <div class="field">
+            <label class="label">Timeline</label>
+            <select class="select" id="c-time">
+              ${options([["asap","ASAP (within 1 month)"],["1-3months","1-3 months"],["3-6months","3-6 months — Most Popular"],["6months+","6+ months (planning ahead)"]], c.timeline||"3-6months")}
+            </select>
+          </div>
+        </div>
+        <div class="field" style="margin-top:12px">
+          <label class="label">Notes (optional)</label>
+          <textarea class="textarea" id="c-notes" rows="3" placeholder="Tell us about your vision, any special requirements, or questions you have...">${escapeHtml(c.notes||'')}</textarea>
+        </div>
+        <div style="background:#f0f9ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px;margin-top:12px;text-align:center;color:var(--primary)">
+          <small>🤝 <strong>Our Promise:</strong> We'll contact you within 24 hours with a detailed estimate and answer any questions you have.</small>
+        </div>
+      `;
+    }
+    function bind(sel,evt,fn){ const el=document.querySelector(sel); if(el) el.addEventListener(evt,fn); }
+    function val(sel){ const el=document.querySelector(sel); return el ? el.value : ''; }
+    render();
+  })();
+  </script>
 </body>
 </html>
