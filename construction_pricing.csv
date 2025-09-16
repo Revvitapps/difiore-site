@@ -1,0 +1,56 @@
+category,item,unit,unit_cost_usd,notes,last_updated
+roofing,Architectural asphalt shingles,square,525,"Base install per 100 sq ft (1 square). Includes underlayment, flashings.",2025-09-15
+roofing,Tear-off & disposal,square,95,"Remove & dispose 1 existing layer",2025-09-15
+roofing,Standing-seam metal roof,square,1150,"Material & install premium panels; add-ons not included",2025-09-15
+roofing,Rubber/EPDM membrane,square,875,"Low-slope membrane system",2025-09-15
+roofing,Ridge vent & accessories,lf,12,"Continuous ridge vent system",2025-09-15
+roofing,Ice & water shield,sf,1.85,"Valleys/eaves protection",2025-09-15
+roofing,Plywood/OSB sheathing replace,sheet,48,"Per 4x8 sheet; labor+material",2025-09-15
+roofing,Gutter guards,lf,8.5,"Per linear foot installed",2025-09-15
+roofing,Seamless aluminum gutters,lf,10.5,"5in K-style incl. hangers/outlets",2025-09-15
+roofing,Downspouts,lf,8,"Per linear foot",2025-09-15
+
+siding,Vinyl siding,sf,6.25,"Material+install; basic lap profiles",2025-09-15
+siding,Hardie/cement board,sf,11.5,"Material+install; primed boards",2025-09-15
+siding,Azek/PVC trim,lf,12.75,"Fascia/soffit/returns as specified",2025-09-15
+siding,House wrap & flashing,sf,1.25,"Weather barrier + tape",2025-09-15
+
+additions,Framing (walls/floors/roof),sf,42,"Structure framing labor+material",2025-09-15
+additions,Sheathing & WRB,sf,6.5,"Wall/floor/roof sheathing + wrap",2025-09-15
+additions,Windows (mid-grade),each,575,"Installed; average size",2025-09-15
+additions,Exterior door (pre-hung),each,825,"Installed; basic",2025-09-15
+additions,Insulation (R-13/R-19),sf,2.4,"Batts incl. labor",2025-09-15
+additions,Drywall hang/finish,sf,3.25,"Walls+ceilings finished to paint",2025-09-15
+additions,Electrical rough/finish,sf,6.5,"Per finished SF allowance",2025-09-15
+additions,HVAC extension,sf,4.2,"Tap existing system where feasible",2025-09-15
+additions,Interior trim & doors,sf,4.6,"Casing/base/int doors set",2025-09-15
+additions,Flooring (LVP mid-grade),sf,4.75,"Material+install",2025-09-15
+
+kitchen,Base allowance per SF (mid),sf,210,"Cabinet+counter+tile+plumbing avg",2025-09-15
+kitchen,Cabinetry (midline),lf,450,"Linear foot; boxes+doors+hardware",2025-09-15
+kitchen,Quartz counters,sf,85,"Templated & installed",2025-09-15
+kitchen,Backsplash tile,sf,28,"Material+install",2025-09-15
+kitchen,Lighting & electrical,sf,6.25,"Per kitchen SF allowance",2025-09-15
+kitchen,Appliance install (set of 4),set,950,"Hookups, not including appliances",2025-09-15
+kitchen,Plumbing reconnections,each,350,"Sink/disposal/DW typical",2025-09-15
+
+bathroom,Powder room (package),each,12000,"Vanity, toilet, finishes (std.)",2025-09-15
+bathroom,Guest full bath (mid),each,28000,"Tub/shower, vanity, toilet, tile",2025-09-15
+bathroom,Primary bath (mid),each,55000,"Larger layout + tile shower",2025-09-15
+bathroom,Walk-in tile shower adder,each,7000,"Over tub/shower baseline",2025-09-15
+bathroom,Curbless shower adder,each,12000,"Waterproofing/pan/recess",2025-09-15
+bathroom,Heated floor,sf,18,"Mat + thermostat",2025-09-15
+bathroom,Vanity upgrade (per ft),lf,600,"Top+base+hardware",2025-09-15
+
+basement,Finish baseline (mid),sf,68,"Framing+insul+drywall+paint+elect",2025-09-15
+basement,Code egress window,each,3500,"Cut, well, window, finishing",2025-09-15
+basement,Full bath add-on,each,22000,"Within basement scope",2025-09-15
+basement,Moisture barrier & subfloor,sf,4.25,"DMX/DRICore-type systems",2025-09-15
+basement,Acoustic ceiling tiles,sf,3.8,"T-bar + tiles",2025-09-15
+
+decks,Pressure-treated deck,sf,55,"Structure+PT decking",2025-09-15
+decks,Composite deck (popular),sf,85,"Structure+boards+hidden clips",2025-09-15
+decks,Premium composite deck,sf,110,"High-end boards & trims",2025-09-15
+decks,Stairs (standard),each,1200,"One run; site conditions vary",2025-09-15
+decks,Railing-basic wood,lf,25,"Per linear foot",2025-09-15
+decks,Railing-metal/cable,lf,60,"Per linear foot",2025-09-15
